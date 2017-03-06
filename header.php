@@ -3,7 +3,6 @@
 #### CENTAURI By John Osborn D'Agostino ####
 -->	
 <html <?php language_attributes(); ?>>
-<?php $siteURL = get_site_url(); ?>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />

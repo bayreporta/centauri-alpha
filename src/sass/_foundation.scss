@@ -18,7 +18,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: Cabin, san-serif;
+    font-family: "futura-pt", helvetica, san-serif;
     color: #333;
 }
 
@@ -36,7 +36,7 @@ h2 {
     font-size: 2em;
     font-weight: 700;
     a {
-        font-family: Cabin, san-serif;
+        font-family: "futura-pt", helvetica, san-serif;
     }
 }
 
@@ -60,7 +60,7 @@ p,
 span,
 li,
 a {
-    font-family: crim, san-serif;
+    font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
     margin: 20px 0;
     line-height: 1.8em;
     font-size: 1.2rem;
@@ -118,17 +118,17 @@ blockquote {
     a {
       color: #fff;
       text-decoration: none;
-      font-family: cabin, san-serif;
+      font-family: "futura-pt", helvetica, san-serif;
       font-size: 1rem;
   }
 }
 
 .san-serif {
-    font-family: "Cabin", "san-serif";
+    font-family: "futura-pt", helvetica, "san-serif";
 }
 
 .serif {
-    font-family: "crim", "serif";
+    font-family: "brandon-grotesque", "futura-pt", helvetica, "serif";
 }
 
 .uppercase {

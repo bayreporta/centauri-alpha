@@ -1,4 +1,6 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
+<?php $siteURL = get_site_url(); ?>
+
 <div id="home-image">
 	<img src="">
 </div>
@@ -67,14 +69,12 @@
 
 			//SORT BY COUNT
 			usort($cat, function($a, $b) {return $b['count'] - $a['count'];});
-
-			print '<!--';var_dump($cat);print '-->'; 
 		?>
 		<div class="home-cat">
 			<h2 class="uppercase aligncenter">Where my work has appeared</h2>
 			<div class="column-three">
 				<?php 
-					foreach ($cat as $c){if ($c['parent'] === 568){print '<a href="'.$siteURL.'\/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} 
+					foreach ($cat as $c){if ($c['parent'] === 568){print '<a target="_blank" href="'.$siteURL.'/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} 
 				?>
 			</div>
 		</div>
@@ -82,28 +82,28 @@
 		<div class="home-cat">
 			<h2 class="uppercase aligncenter">What projects I've worked on</h2>
 			<div class="column-three">
-				<?php foreach ($cat as $c){if ($c['parent'] === 493){print '<a href="'.$siteURL.'\/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
+				<?php foreach ($cat as $c){if ($c['parent'] === 493){print '<a target="_blank" href="'.$siteURL.'/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
 			</div>
 		</div>
 		<hr class="thin">
 		<div class="home-cat">
 			<h2 class="uppercase aligncenter">What skills I have</h2>
 			<div class="column-three">
-				<?php foreach ($cat as $c){if ($c['parent'] === 569){print '<a href="'.$siteURL.'\/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
+				<?php foreach ($cat as $c){if ($c['parent'] === 569){print '<a target="_blank" href="'.$siteURL.'/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
 			</div>
 		</div>
 		<hr class="thin">
 		<div class="home-cat">
 			<h2 class="uppercase aligncenter">What formats I work in</h2>
 			<div class="column-three">
-				<?php foreach ($cat as $c){if ($c['parent'] === 570){print '<a href="'.$siteURL.'\/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
+				<?php foreach ($cat as $c){if ($c['parent'] === 570){print '<a target="_blank" href="'.$siteURL.'/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
 			</div>
 		</div>
 		<hr class="thin">
 		<div class="home-cat">
 			<h2 class="uppercase aligncenter">What tools I've built</h2>
 			<div class="column-three">
-				<?php foreach ($cat as $c){if ($c['parent'] === 571){print '<a href="'.$siteURL.'\/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
+				<?php foreach ($cat as $c){if ($c['parent'] === 571){print '<a target="_blank" href="'.$siteURL.'/category/'.$c['slug'].'">'.$c['name'].'</a><br>';}} ?>
 			</div>
 		</div>
 		<hr class="thin">
@@ -116,7 +116,7 @@
 		/* LOAD HOME IMAGE
 		======================================*/
 		var srcSize = window.innerWidth || document.body.clientWidth;
-		srcSize >= 768 ? jQuery('#home-image img').attr('src', 'http://bayreporta.com/wp-content/uploads/2015/04/home-head.jpg') : jQuery('#home-image img').attr('src', 'http://bayreporta.com/wp-content/uploads/2016/01/home-img-mobile.png');
+		srcSize >= 768 ? jQuery('#home-image img').attr('src', 'http://localhost/wp-content/uploads/2015/04/home-head.jpg') : jQuery('#home-image img').attr('src', 'http://bayreporta.com/wp-content/uploads/2016/01/home-img-mobile.png');
 		
 	})
 

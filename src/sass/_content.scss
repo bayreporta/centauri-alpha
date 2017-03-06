@@ -53,7 +53,7 @@
     a {
         color: #333;
         text-decoration: none;
-        font-family: Cabin, san-serif;
+        font-family: "futura-pt", helvetica, san-serif;
         line-height: 1.3em;
 
         &:hover {
@@ -70,7 +70,7 @@
     .author,
     .entry-date {
         font-size: .9em;
-        font-family: cabin, san-serif;
+        font-family: "futura-pt", helvetica, san-serif;
     }
 
     &>div:first-of-type span {
