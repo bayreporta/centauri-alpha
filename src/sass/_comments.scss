@@ -1,0 +1,84 @@
+/* COMMENTS STYLES
+====================================*/
+
+#comments {
+    margin: 10px 5%;
+
+    a {
+    	font-size: 1em;
+	}
+}
+
+.comment-body {
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px #ddd solid;
+
+    p {
+	    font-size: .8em;
+	    color: #424747;
+	    line-height: 1.4em;
+	    font-weight: 400;	
+
+	    @include media(">=tablet"){
+	    	p {
+		        font-size: .9em;
+		    }
+	    }
+	}
+
+    &:last-of-type {
+    	border: none;
+	}
+}
+
+.comments-title {
+    font-size: 1.2em;
+    color: #29446e;
+    line-height: 1.5em;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.comment-author {
+    margin: 20px 0;
+
+    img {
+	    margin-right: 5px;
+	}
+}
+
+.reply {
+    margin-top: 10px;
+    font-size: .8em;
+}
+
+#reply-title {
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.comment-notes {
+    line-height: 1.4em;
+    margin-bottom: 25px;
+}
+
+.comment-input {
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.comment-form-email .comment-input {
+    margin-left: 11px;
+}
+
+.logged-in-as {
+    margin-bottom: 15px;
+}
+
+.comment-meta {
+    font-size: .8em;
+    margin-bottom: 10px
+}

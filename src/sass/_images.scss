@@ -1,0 +1,156 @@
+/* IMAGE STYLES
+====================================*/
+.post-thumb {
+    width: 100%;
+
+    @include media(">=desktop"){
+        width: 50%;
+        float: right;
+        padding: 1% 0 2% 2%;
+    }
+
+    p {
+        padding-bottom: 10px;
+        font-style: italic;
+        color: #aaa;
+    }
+}
+
+.post-large {
+    width: 100%;
+    display: block;
+    clear: both;
+    margin-bottom: 1.5em;
+
+    p {
+        padding-bottom: 10px;
+        font-style: italic;
+        color: #aaa;
+    }
+}
+
+.attachment-post-thumbnail {
+    width: 95%;
+    height: auto;
+    margin: 25px auto;
+    display: block;
+
+    @include media(">=tablet"){
+        width: 90%;
+        height: auto;
+        margin: 0 5% 25px 0;
+        display: block;
+        border: 1px #aaa solid;
+    }
+}
+
+.page-header .attachment-post-thumbnail {
+    @include media(">=tablet"){
+        width: 100%;
+        float: none;
+        margin: 25px 0
+    }
+}
+
+.page-no-header .attachment-post-thumbnail {
+    width: 95%;
+    height: auto;
+    margin: 0px auto 20px auto;
+    display: block;
+    max-width: 300px;
+    padding: 0 2%;
+}
+
+.wp-caption {
+    margin: 10px 5%;
+    width:100%;
+}
+
+.size-medium {
+    width: 85%;
+    height: auto;
+    max-width: 300px;
+}
+
+.size-large {
+    width:100%;
+    height:100%;
+}
+
+.size-full {
+    width: 100%;
+}
+
+.size-large,
+.size-full,
+.wp-caption {
+    height: auto;
+    display: block;
+    max-width:850px;
+}
+
+.wp-caption-text {
+    padding-bottom: 10px;
+    font-style: italic;
+    color: #aaa;
+}
+
+#home-content .attachment-small {
+    max-width: 395px;
+    padding: 10px 1%;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+
+img.aligncenter {
+    text-align: none;
+    margin: 1rem auto;
+    display: block;
+
+    @include media(">=tablet"){
+        text-align: none;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+img.alignleft {
+    text-align: none;
+    margin: 1rem auto;
+    display: block;
+
+    @include media(">=tablet"){
+        text-align: none;
+        float: left;
+        display: block;
+    }
+}
+
+img.alignright {
+    text-align: none;
+    margin: 1rem auto;
+    display: block;
+
+    @include media(">=desktop"){
+        text-align: none;
+        display: block;
+        float: right;
+    }
+}
+
+.entry-content div.wp-caption {
+    margin: 0 auto;
+    display: block;
+    margin: 2rem auto;
+}
+
+.entry-content .wp-caption-text {
+    margin: 10px 0 0 0;
+    padding: 4px 0 0 0;
+    border-top: #aaa solid 1px;
+    font-size: .8em;
+    font-family: crim, san-serif;
+    color: #424747;
+    text-align: left;
+}

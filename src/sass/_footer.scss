@@ -1,0 +1,36 @@
+/* FOOTER STYLES
+====================================*/
+#footer {
+	width:100%;
+	height:40px;
+	background:#14435D;
+}
+
+#copyright {
+	float:left;
+	color:#fff;
+	font-size:1em;
+	font-family: crim,san-serif;
+	font-weight:300; 
+	margin:10px 0 0 5px;
+}
+
+#social-foot {
+	float:right;
+	margin:5px 0 0 0;
+
+	a {
+	    color: #fff;
+	    font-size: 1.2em;
+	    cursor: pointer;
+
+	    &:hover {
+		    color: #ddd;
+		}
+	}
+
+	&>li {
+		display:inline-block;
+		margin:0 20px 0 0;
+	}
+}

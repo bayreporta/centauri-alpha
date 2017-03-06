@@ -1,0 +1,42 @@
+/* INDEX AND ARCHIVE STYLES
+====================================*/
+
+.index-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.index article {
+    padding-bottom: 10px;
+    border-bottom: 1px #aaa solid;
+    margin: 0 5%;
+
+    &:last-of-type {
+        margin-bottom: 25px;
+        border-bottom: none;
+    }
+}
+
+.index-entry {
+    @include media(">=tablet"){
+        &>aside {
+            display: block;
+        }
+    }
+}
+
+.pagination {
+    width: 100%;
+    position: relative;
+    height: 40px;
+
+    &>div:first-of-type {
+        left: 0;
+        position: absolute;
+    }
+
+    &>div:last-of-type {
+        right: 0;
+        position: absolute;
+    }
+}
