@@ -11,9 +11,8 @@
 	<script src="https://use.typekit.net/cta0jll.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/style.css" />
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="https://use.fontawesome.com/4ac2a9e804.js"></script>
 	<?php wp_head(); ?>
-	<script type="text/javascript" src="<?php echo get_site_url();?>/wp-content/themes/centauri/scripts/master.js"></script>
 
 </head>
 <body <?php body_class(); ?>>

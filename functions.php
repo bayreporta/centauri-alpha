@@ -36,7 +36,6 @@ function centalpha_nav_menus(){
 	);
 }
 
-
 /* #3: Include core script files
 ---------------------------------------------------------------------------*/
 add_action( 'wp_enqueue_scripts', 'cantalpha_load_scripts' );
@@ -44,6 +43,7 @@ function cantalpha_load_scripts()
 {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'tiny_mce' );
+	wp_enqueue_script( 'pym' , '/wp-content/themes/centauri-alpha/scripts/pym.v1.min.js' );
 }
 
 
@@ -70,20 +70,4 @@ function centalpha_comments_number( $count ){
 	} else {
 		return $count;
 	}
-}
-
-/* #5: Custom post edit icon
----------------------------------------------------------------------------*/
-function edit_button($before = '', $after = '', $id = 0){
-	if ( ! $post = get_post( $id ) ) {
-		return;
-	}
-
-	if ( ! $url = get_edit_post_link( $post->ID ) ) {
-		return;
-	}
-
-	$link = '<a class="post-edit-link" href="' . $url . '"><i class="fa fa-pencil-square-o"></i></a>';
-
-	echo $before . apply_filters( 'edit_post_link', $link, $post->ID ) . $after;
 }
