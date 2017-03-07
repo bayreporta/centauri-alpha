@@ -1,15 +1,16 @@
-jQuery(document).ready(function() {
-
-	/* NAVIGATION
-	======================================*/
-	jQuery('#menu').on('click', function(){jQuery('#burger-menu').css('display', 'block');});
-	jQuery('#burger-menu .fa').on('click', function(){jQuery('#burger-menu').css('display', 'none');});
-
-
-	/* LOAD HOME IMAGE
-	======================================*/
-	
-
+/* #1: Mobile navigation - nom nom nom burger
+---------------------------------------------------------------------------*/
+jQuery(document).ready(function(){
+	jQuery('#burger').on('click', function(){
+		if (jQuery(this).hasClass('toggled')){
+			jQuery(this).removeClass('toggled');
+			jQuery('.menu-navigation-container').hide();
+		}
+		else {
+			jQuery(this).addClass('toggled');
+			jQuery('.menu-navigation-container').show();
+		}		
+	});
 });
 
 

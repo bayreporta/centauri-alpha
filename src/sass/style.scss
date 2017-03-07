@@ -11,6 +11,13 @@
 @import 'compass';
 @import 'compass/reset';
 
+/* General Variables
+------------------------------------------------*/
+$darkBkg: #292929;
+$oldColor: #14435D;
+$grayColor: #4e4e4e;
+/*#007C8F*/
+
 /* Media variables and expression aliases
 ------------------------------------------------*/
 $breakpoints: (phone:320px, tablet:768px, desktop:1028px) !default;

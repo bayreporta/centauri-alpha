@@ -1,11 +1,7 @@
 /* FOUNDATION STYLES
 ====================================*/
 
-html {
-    font-size: 100%;
-    background: #14435D;
-}
-
+html,
 body {
     font-size: 100%;
     width: 100%;
@@ -19,7 +15,7 @@ h3,
 h4,
 h5 {
     font-family: "futura-pt", helvetica, san-serif;
-    color: #333;
+    color: $darkBkg;
 }
 
 h1 {
@@ -59,12 +55,12 @@ i {
 p,
 span,
 li,
-a {
+{
     font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
-    margin: 20px 0;
+    margin-bottom: 1em;
     line-height: 1.8em;
     font-size: 1.2rem;
-    color: #333;
+    color: $darkBkg;
 }
 
 ul {
@@ -72,9 +68,12 @@ ul {
 }
 
 a {
+    font-size: 1.2rem;    
+    font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
     text-decoration: none;
-    color: #007C8F;
+    color: $darkBkg;
     cursor: pointer;
+
     &:hover {
         text-decoration: underline;
         color: #72B0B4;
