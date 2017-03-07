@@ -76,9 +76,9 @@ a {
 
     &:hover {
         text-decoration: underline;
-        color: #72B0B4;
+        color: $grayColor;
         h2 {
-            color: #72B0B4;
+            color: $grayColor;
         }
     }
     h2 {

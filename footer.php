@@ -4,6 +4,9 @@
 				<div id="copyright">
 					<?php echo sprintf( __( '%1$s %2$s %3$s', 'centalpha' ), '&copy;', date( 'Y' ), esc_html( get_bloginfo( 'name' ) ) ); ?>
 				</div>
+				<div id="social-foot">
+					<?php print centalpha_populate_social_media_buttons(); ?>
+				</div>
 			</footer>
 		</div>
 		<?php wp_footer(); ?>

@@ -2,7 +2,7 @@
 
 /* #1: Grab all categories for the post and populate
 ================================================================================*/
-function retreive_post_categories($id){
+function centalpha_centalpha_retreive_post_categories($id){
 	$ret = '';
 	$siteURL = get_site_url();
 	$posttags = get_the_category($id); 

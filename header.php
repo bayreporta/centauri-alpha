@@ -8,13 +8,13 @@
 	<link rel="shortcut icon" href="<?php echo get_site_url();?>/favicon.ico">
 	<meta name="author" content="John Osborn D'Agostino">
 	<meta name="copyright" content="John Osborn D'Agostino">
-	<meta name="description" content="Davis-based web developer and data journalist specializing in creating online interactives, data visualizations, and custom Wordpress themes and plugins. ">
+	<meta name="description" content="Davis-based web developer, journalist, and designer specializing in creating web-based interactives, data visualizations, and custom Wordpress themes and plugins.">
 	<meta http-equiv="content-language" content="en">
 	<meta http-equiv="content-type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>">
 	<meta name="robots" content="index,follow">
 	<meta name="revisit-after" content="1 days">
 	<meta name="revisit" content="after 1 days">
-	<meta name="keywords" lang="en" content="Wordpress development, data visualization, front end development, portfolio, web developer, Bay Area, California, Sacramento, Davis">
+	<meta name="keywords" lang="en" content="Wordpress development, data visualization, front end development, portfolio, journalist, web developer, San Francisco Bay Area, California, Sacramento, Davis">
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Typekit, font awesome, main stylesheet loads -->

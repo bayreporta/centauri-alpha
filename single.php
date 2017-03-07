@@ -87,7 +87,7 @@
 						<p class="tags"> 
 							<?php 
 								$curID = get_the_ID(); 
-								print retreive_post_categories($curID);
+								print centalpha_retreive_post_categories($curID);
 								unset($curID); 
 							?>
 						</p>
