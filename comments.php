@@ -1,6 +1,6 @@
 <?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
 <section id="comments">
-<?php if ( comments_open() ) summon_comments(); ?>
+<?php if ( comments_open() ) centalpha_comments(); ?>
 <?php 
 if ( have_comments() ) : 
 global $comments_by_type;
@@ -31,7 +31,7 @@ if ( ! empty( $comments_by_type['comment'] ) ) :
 	<section id="trackbacks-list" class="comments">
 	<h3 class="comments-title"><?php echo '<span class="ping-count">' . $ping_count . '</span> ' . ( $ping_count > 1 ? __( 'Trackbacks', 'sol' ) : __( 'Trackback', 'sol' ) ); ?></h3>
 	<ul>
-	<?php wp_list_comments( 'type=pings&callback=sol_custom_pings' ); ?>
+	<?php wp_list_comments( 'type=pings&callback=centalpha_custom_pings' ); ?>
 	</ul>
 	</section>
 <?php 
