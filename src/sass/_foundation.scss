@@ -63,6 +63,10 @@ li,
     color: $darkBkg;
 }
 
+input {
+    font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
+}
+
 ul {
     margin: 0 0 0 5%;
 }
@@ -92,7 +96,7 @@ a {
 
 blockquote {
     margin: 0 10%;
-    font-family: 'crim', san-serif;
+    font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
     @include media(">=tablet") {
         margin: 40px 10%;
     }
@@ -102,24 +106,53 @@ blockquote {
 /* GENERAL CLASS STYLES
 ====================================*/
 
-.button {
-    display: inline-block;
-    margin: 1em 0;
-    padding: .1em .5em;
-    border-radius: 10px;
-    background: #007C8F;
-    cursor: pointer;
+.button-container {
+    margin: 0 auto;
+}
 
-    &:hover {
-      background: #72B0B4;
+.button {
+    padding: 1em;
+    background: #fff;
+    cursor: pointer;
+    margin: 0px auto;
+    height: 20px;
+    float: left;
+    border: 3px solid $darkBkg;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    text-transform: lowercase;
+
+    &:after {
+        content:'';
+        display: block;
+        background: $darkBkg;
+        position: absolute;
+        top: .25em;
+        bottom: .25em;
+        left: .25em;
+        right: .25em;
+        z-index: -1;
     }
 
-    a {
-      color: #fff;
-      text-decoration: none;
-      font-family: "futura-pt", helvetica, san-serif;
-      font-size: 1rem;
-  }
+    &:hover {
+      background: $darkBkg;
+    }
+}
+
+.input-button {
+    background: #292929;
+    border: 2px solid #292929;
+    color: #fff;
+    padding: 0 .5em;
+    cursor: pointer;
+    margin: 1em 0; 
+    text-transform: lowercase;
+    font-size: 1.2rem;
+
+    &:hover {
+        background: $grayColor;
+    }
 }
 
 .san-serif {
