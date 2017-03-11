@@ -2,22 +2,41 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
 
 <!-- Featured image area -->
-<div id="home-image">
-	<div>
+<section id="home-image">
+	<div role="main-head">
 		<h1 class="aligncenter">
 			<?php print get_field('ca_home_main_header'); ?>
 		</h1>
 	</div>
-	<div>
+	<div role="second-head">
 		<h2 class="aligncenter">
 			<?php print get_field('ca_home_second_header'); ?>			
 		</h2>
 	</div>
-	<div>
+	<div role="image">
 		<img alt="Hands using a silkscreen press. Lots of colors." src="">
 	</div>
-</div>
+</section>
+
 <div id="content" class="content home" role="main">
+	<!-- Services area -->
+
+	<!-- Featured clips area -->
+	<section id="home-clips">
+		<div class="home-clip">
+			<div role="image">
+				<img src="">
+			</div>
+			<div role="content">
+				<h3></h3>
+				<p></p>
+			</div>
+			<div class="button-container">
+				<div class="button">XXXXX</div>
+			</div>
+		</div>
+	</section>
+	<!-- Home bio area -->
 	<section id="home-bio">
 		<h2 class="aligncenter"><strong><?php print get_field('ca_home_bio_header'); ?></strong></h2>
 		<div>

@@ -1,6 +1,7 @@
 /* HOME STYLES
 ====================================*/
 
+
 #home-image {
 	position: relative;    
 	background: #292929;
@@ -13,6 +14,7 @@
 		right: 2.5%;
 	}
 
+	/* main header */
 	&>div:first-of-type {			
 		top: 20%;
 		@include simple-transform(null, null, null, -20%);
@@ -36,6 +38,7 @@
 		}
 	}
 
+	/* secondary header */
 	&>div:nth-of-type(2) {				
 		top: 80%;
 		@include simple-transform(null, null, null, -80%);
@@ -62,16 +65,18 @@
 		}
 	}
 
+	/* image itself */
 	&>div:last-of-type {
 		opacity: .5;
 
 		img {
         	width: 100%;
     	}
-	}
-
-   
+	}   
 }
+
+
+
 
 
 #home-bio {
