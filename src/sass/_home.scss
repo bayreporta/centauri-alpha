@@ -2,10 +2,77 @@
 ====================================*/
 
 #home-image {
-    img {
-        width: 100%;
-    }
+	position: relative;    
+	background: #292929;
+
+	&>div:first-of-type, &>div:nth-of-type(2) {
+		position: absolute;
+		z-index:100;
+		width: 95%;
+		left: 2.5%;
+		right: 2.5%;
+	}
+
+	&>div:first-of-type {			
+		top: 20%;
+		@include simple-transform(null, null, null, -20%);
+
+		@include media(">=tablet"){
+			top: 40%;
+			@include simple-transform(null, null, null, -50%);
+		}
+
+		h1 {
+			color: #fff;
+			font-size: 2rem;
+
+			@include media(">=tablet", "<desktop"){
+				font-size: 2.5rem;
+			}
+
+			@include media(">=desktop"){
+				font-size: 3rem;
+			}
+		}
+	}
+
+	&>div:nth-of-type(2) {				
+		top: 80%;
+		@include simple-transform(null, null, null, -80%);
+
+		@include media(">=tablet", "<desktop"){
+			top: 60%;
+			@include simple-transform(null, null, null, -60%);
+		}
+
+		@include media(">=desktop"){
+			top: 50%;
+			@include simple-transform(null, null, null, -50%);
+		}
+
+		h2 {
+			color: #fff;
+			text-transform: lowercase;
+			font-weight: 400;
+			font-size: 1.2rem;
+
+			@include media(">=tablet"){
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&>div:last-of-type {
+		opacity: .5;
+
+		img {
+        	width: 100%;
+    	}
+	}
+
+   
 }
+
 
 #home-bio {
 	position: relative;

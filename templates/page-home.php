@@ -1,6 +1,22 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <?php /* Template Name: Home Page */ get_header(); ?>
-<div id="home-image"><img src=""></div>
+
+<!-- Featured image area -->
+<div id="home-image">
+	<div>
+		<h1 class="aligncenter">
+			<?php print get_field('ca_home_main_header'); ?>
+		</h1>
+	</div>
+	<div>
+		<h2 class="aligncenter">
+			<?php print get_field('ca_home_second_header'); ?>			
+		</h2>
+	</div>
+	<div>
+		<img alt="Hands using a silkscreen press. Lots of colors." src="">
+	</div>
+</div>
 <div id="content" class="content home" role="main">
 	<section id="home-bio">
 		<h2 class="aligncenter"><strong><?php print get_field('ca_home_bio_header'); ?></strong></h2>
@@ -26,11 +42,17 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function(){		
+		/* Adjust featured image for home page based on device width */
 		var srcSize = window.innerWidth || document.body.clientWidth,
-			mainImg = <?php echo json_encode($mainImg); ?>,
-			mainImgMobile = <?php echo json_encode($mainImgMobile); ?>;
+			mainElm = jQuery('#home-image img'),
+			mainImg = <?php echo json_encode(get_the_post_thumbnail_url()); ?> ,
+			mainImgTab = <?php echo json_encode(get_the_post_thumbnail_url(null, 'large')); ?> 
+			mainImgMob = <?php echo json_encode(get_the_post_thumbnail_url(null, 'medium')); ?>;
 
-		srcSize >= 768 ? jQuery('#home-image img').attr('src', mainImg) : jQuery('#home-image img').attr('src', mainImgMobile);
+		if (srcSize >= 1028) {mainElm.attr('src', mainImg)}
+		else if (srcSize >= 768) {mainElm.attr('src', mainImgTab)}
+		else {mainElm.attr('src', mainImgMob)}
+
 	})
 </script>
 <?php get_footer(); ?>
