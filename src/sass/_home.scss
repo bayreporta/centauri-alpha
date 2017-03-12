@@ -75,7 +75,70 @@
 	}   
 }
 
+#home-clips {
 
+	.home-clip {
+		padding-bottom: 6em;
+		position: relative;
+		overflow: hidden;
+
+		.button-container {
+			position: absolute;
+			left: 50%;
+			@include simple-transform(null, null, -50%);
+		}
+
+		div[role="content"] {
+			width: 80%;
+		    margin: 0 auto;
+		    background-color: #fff;
+		    position: relative;
+		    padding: 20px 10px 0 10px;
+		    top: -20px;
+
+		   	@include media(">=desktop"){
+				padding: 20px 10px 50px 10px;
+    			top: -235px;
+			}
+		}
+
+		div[role="image"] {
+			/*@include media(">=desktop"){
+				float: left;
+			}*/
+		}
+
+		p {
+			font-size: 1.1rem;
+		}
+
+		h3 {
+			margin: 0;
+		    font-size: 1.2rem;
+		    text-align: center;
+		    text-transform: uppercase;
+		}
+
+		h4 {
+			margin: 10px 0;
+			font-style: italic;
+    		color: #aaa;
+    		text-align: center;
+		}
+
+		hr {
+			border-bottom: #aaa 1px solid;
+    		width: 30%;
+   			margin: 1em auto;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+
+}
 
 
 

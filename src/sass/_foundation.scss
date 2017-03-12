@@ -108,6 +108,7 @@ blockquote {
 
 .button-container {
     margin: 0 auto;
+    min-height: 60px;
 }
 
 .button {
@@ -155,28 +156,8 @@ blockquote {
     }
 }
 
-.san-serif {
-    font-family: "futura-pt", helvetica, "san-serif";
-}
-
-.serif {
-    font-family: "brandon-grotesque", "futura-pt", helvetica, "serif";
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
 .tags {
     font-style: italic;
-}
-
-.flex {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
 }
 
 /* CLEARS AND FLOAT STYLES

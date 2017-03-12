@@ -23,19 +23,10 @@
 
 	<!-- Featured clips area -->
 	<section id="home-clips">
-		<div class="home-clip">
-			<div role="image">
-				<img src="">
-			</div>
-			<div role="content">
-				<h3></h3>
-				<p></p>
-			</div>
-			<div class="button-container">
-				<div class="button">XXXXX</div>
-			</div>
-		</div>
+		<h2 class="aligncenter"><strong><?php print get_field('ca_home_clip_header'); ?></strong></h2>
+		<?php print ca_populate_home_clips(get_field('ca_home_clip_list')); ?>
 	</section>
+
 	<!-- Home bio area -->
 	<section id="home-bio">
 		<h2 class="aligncenter"><strong><?php print get_field('ca_home_bio_header'); ?></strong></h2>
