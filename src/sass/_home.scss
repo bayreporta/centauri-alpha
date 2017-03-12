@@ -76,11 +76,21 @@
 }
 
 #home-clips {
+	overflow: hidden;
 
 	.home-clip {
 		padding-bottom: 6em;
 		position: relative;
 		overflow: hidden;
+
+		@include media(">=desktop"){
+			width: 45%;
+			float: left;	
+
+			&:nth-child(even){
+				float: right;
+			}
+		}
 
 		.button-container {
 			position: absolute;
@@ -98,7 +108,7 @@
 
 		   	@include media(">=desktop"){
 				padding: 20px 10px 50px 10px;
-    			top: -235px;
+    			top: -100px;
 			}
 		}
 
@@ -134,6 +144,10 @@
 
 		img {
 			width: 100%;
+
+			@include media(">=desktop"){
+				max-height:250px;	
+			}
 		}
 	}
 
