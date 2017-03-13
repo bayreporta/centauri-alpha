@@ -1,6 +1,22 @@
 /* HOME STYLES
 ====================================*/
+#content.home {	
 
+	ul {
+		list-style-type: circle;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		color: $grayColor;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		margin: 0;
+	}
+}
 
 #home-image {
 	position: relative;    
@@ -68,11 +84,82 @@
 	/* image itself */
 	&>div:last-of-type {
 		opacity: .5;
-
-		img {
-        	width: 100%;
-    	}
 	}   
+}
+
+#home-services {
+	overflow: hidden;
+
+	.home-service {
+		height: 160px;
+		margin-bottom: 1em;
+		padding-bottom: 20em;
+		position: relative;
+
+		@include media(">=tablet"){
+			width: 48%;
+		}
+
+		@include media(">=desktop"){
+			padding-bottom: 0;
+			width: 100%;	
+		}
+	}
+
+	div[role="image"] {
+		width: 50%;
+    	margin: 0 auto;
+
+	   	@include media(">=tablet"){
+			width: 70%;
+		}
+
+		@include media(">=desktop"){
+			width: 20%;
+			float:left;
+		}
+	}
+
+	div[role="content"] {
+		padding-top: 1em;
+
+	   	@include media(">=desktop"){
+			width: 60%;
+			float: left;    
+			margin-left: 2%;
+		}
+	}
+
+	.button-container {
+		position: absolute;
+		left: 50%;
+		@include simple-transform(null, null, -50%);
+
+		@include media(">=tablet", "<=desktop"){
+			min-width: 133px;
+		}
+
+		@include media(">=desktop"){
+			position: relative;
+			left: 0;
+			@include simple-transform(null, null, 0);
+			float: right;    
+			margin: 40px auto;
+		}		
+	}
+
+	p {
+		font-size: 1.1rem;
+	}
+
+	h3 {
+		margin-bottom: 10px !important;
+		text-align: center;
+
+		@include media(">=desktop"){
+			text-align: left;
+		}		
+	}
 }
 
 #home-clips {
@@ -86,6 +173,8 @@
 		@include media(">=desktop"){
 			width: 45%;
 			float: left;	
+			padding-bottom: 0;
+
 
 			&:nth-child(even){
 				float: right;
@@ -110,24 +199,16 @@
 				padding: 20px 10px 50px 10px;
     			top: -100px;
 			}
-		}
-
-		div[role="image"] {
-			/*@include media(">=desktop"){
-				float: left;
-			}*/
-		}
+		}		
 
 		p {
 			font-size: 1.1rem;
-		}
+		}	
 
 		h3 {
 			margin: 0;
-		    font-size: 1.2rem;
-		    text-align: center;
-		    text-transform: uppercase;
-		}
+		    text-align: center;		    
+		}	
 
 		h4 {
 			margin: 10px 0;
@@ -143,10 +224,8 @@
 		}
 
 		img {
-			width: 100%;
-
 			@include media(">=desktop"){
-				max-height:250px;	
+				max-height:210px;	
 			}
 		}
 	}
@@ -154,7 +233,51 @@
 
 }
 
+#home-tests {
+	overflow: hidden;
 
+	.home-test {
+		overflow: hidden;
+	}
+
+	div[role="image"] {
+	   	@include media(">=desktop"){
+			width: 20%;
+			float:left;
+		}
+	}
+
+	div[role="content"] {
+	   	@include media(">=desktop"){
+			width: 70%;
+			float: right;    
+		}
+
+		&>div:first-of-type {
+			position: relative;
+			padding-top: 1em;
+
+			i {
+				color: $grayLiteColor;
+				font-size: 2rem;
+				position: absolute;
+   				left: -35px;
+    			top: 5px;
+			}
+		}
+
+		&>div:last-of-type {
+			
+			@include media(">=desktop"){
+				text-align: right;
+			}
+
+			p {
+				color: $grayLiteColor;
+			}
+		}
+	}
+}
 
 #home-bio {
 	position: relative;

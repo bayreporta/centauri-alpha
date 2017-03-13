@@ -20,16 +20,40 @@
 
 <div id="content" class="content home" role="main">
 	<!-- Services area -->
+	<section id="home-services">
+		<h2 class="aligncenter"><?php print get_field('ca_home_service_header'); ?></h2>		
+		<?php print ca_populate_home_services(get_field('ca_home_services_list')); ?>
+	</section>
+
 
 	<!-- Featured clips area -->
 	<section id="home-clips">
-		<h2 class="aligncenter"><strong><?php print get_field('ca_home_clip_header'); ?></strong></h2>
+		<h2 class="aligncenter"><?php print get_field('ca_home_clip_header'); ?></h2>
 		<?php print ca_populate_home_clips(get_field('ca_home_clip_list')); ?>
 	</section>
 
+	<!-- Home testimonials area -->
+	<section id="home-tests">
+		<div class="home-test">
+			<div role="image">
+				<img src="http://localhost/wp-content/uploads/2017/03/temp-bio-pic.png">
+			</div>
+			<div role="content">
+				<div>
+					<i class="fa fa-quote-left" aria-hidden="true"></i>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi consequat in eros et dictum. Sed ullamcorper, ipsum nec pharetra rhoncus, tortor nunc condimentum lacus, ut ornare purus velit nec massa. In sed condimentum velit.</p>
+				</div>
+				<div>
+					<p>John Osborn D'Agostino, Web Developer</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 	<!-- Home bio area -->
 	<section id="home-bio">
-		<h2 class="aligncenter"><strong><?php print get_field('ca_home_bio_header'); ?></strong></h2>
+		<h2 class="aligncenter"><?php print get_field('ca_home_bio_header'); ?></h2>
 		<div>
 			<div>
 				<img src="<?php echo get_field('ca_home_bio_image'); ?>">
