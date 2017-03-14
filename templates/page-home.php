@@ -1,8 +1,7 @@
-<script src='https://www.google.com/recaptcha/api.js'></script>
 <?php /* Template Name: Home Page */ get_header(); ?>
 
 <!-- Featured image area -->
-<section id="home-image">
+<section class="main-image">
 	<div role="main-head">
 		<h1 class="aligncenter">
 			<?php print get_field('ca_home_main_header'); ?>
@@ -18,7 +17,7 @@
 	</div>
 </section>
 
-<div id="content" class="content home" role="main">
+<section id="content" class="content home" role="main">
 
 	<!-- Services area -->
 	<section id="home-services">
@@ -67,7 +66,7 @@
 		</div>
 	</section>
 
-</div>
+</section>
 <?php  $mainImg = get_field('ca_home_main_image'); ?>
 <?php  $mainImgMobile = get_field('ca_home_main_image_mobile'); ?>
 
@@ -75,9 +74,9 @@
 	jQuery(document).ready(function(){		
 		/* Adjust featured image for home page based on device width */
 		var srcSize = window.innerWidth || document.body.clientWidth,
-			mainElm = jQuery('#home-image img'),
+			mainElm = jQuery('.main-image img'),
 			mainImg = <?php echo json_encode(get_the_post_thumbnail_url()); ?> ,
-			mainImgTab = <?php echo json_encode(get_the_post_thumbnail_url(null, 'medium-large')); ?> 
+			mainImgTab = <?php echo json_encode(get_the_post_thumbnail_url(null, 'large')); ?> 
 			mainImgMob = <?php echo json_encode(get_the_post_thumbnail_url(null, 'medium')); ?>;
 
 		if (srcSize >= 1028) {mainElm.attr('src', mainImg)}
