@@ -9,6 +9,7 @@
 	h2 {
 		text-transform: uppercase;
 		color: $grayColor;
+		font-size: 1.6rem;
 	}
 
 	h3 {
@@ -16,8 +17,14 @@
 		text-transform: uppercase;
 		margin: 0;
 	}
+
+	&>section {
+		margin-bottom: 2em;
+	}
 }
 
+/* Featured Image area
+=================================================*/
 #home-image {
 	position: relative;    
 	background: #292929;
@@ -87,13 +94,15 @@
 	}   
 }
 
+/* Services area
+=================================================*/
 #home-services {
 	overflow: hidden;
 
 	.home-service {
 		height: 160px;
 		margin-bottom: 1em;
-		padding-bottom: 20em;
+		padding-bottom: 25em;
 		position: relative;
 
 		@include media(">=tablet"){
@@ -162,6 +171,8 @@
 	}
 }
 
+/* Clips area
+=================================================*/
 #home-clips {
 	overflow: hidden;
 
@@ -233,17 +244,25 @@
 
 }
 
+/* Testimonials area
+=================================================*/
 #home-tests {
 	overflow: hidden;
+	position: relative;
+	padding-bottom: 6em;
 
 	.home-test {
 		overflow: hidden;
 	}
 
 	div[role="image"] {
+		width: 50%;
+    	margin: 0 auto;
+
 	   	@include media(">=desktop"){
 			width: 20%;
 			float:left;
+			margin: 0;
 		}
 	}
 
@@ -261,26 +280,53 @@
 				color: $grayLiteColor;
 				font-size: 2rem;
 				position: absolute;
-   				left: -35px;
+   				left: 0;
     			top: 5px;
+
+    			@include media(">=desktop"){
+					left: -35px;
+					top: 20px;				  
+				}
+			}
+
+			p {
+				margin-left: 2em;
+
+				@include media(">=desktop"){
+					margin-left: 0;					  
+				}
 			}
 		}
 
 		&>div:last-of-type {
-			
-			@include media(">=desktop"){
-				text-align: right;
-			}
+			text-align: right;
+			float: right;
+			width: 70%;
+
+			@include media(">=tablet"){
+				width: 100%;
+				float: none;			  
+			}		
 
 			p {
 				color: $grayLiteColor;
 			}
 		}
 	}
+
+	.button-container {
+		position: absolute;
+		left: 50%;
+		@include simple-transform(null, null, -50%);
+	}
 }
 
+/* Bio area
+=================================================*/
 #home-bio {
+	overflow: hidden;
 	position: relative;
+	padding-bottom: 6em;
 
 	.button-container {
 		position: absolute;
@@ -288,27 +334,54 @@
     	@include simple-transform(null, null, -50%);
 	}
 
-	&>div {
-		position: relative;		
+	div[role="image"] {
+	   	width: 70%;
+    	margin: 0 auto 1em auto;
 
-		&>div:first-of-type {
-		    max-width: 250px;    
-		    max-height: 250px;
-    		margin: 0 auto;
+	   	@include media(">=desktop"){
+			width: 35%;
+			float:left;
+			margin: 0;
+		}
 
-			img {
-				width: 100%;
-				height: 100%;
-			}
+		img {
+			width: 100%;
 		}
-		
-		&>div:last-of-type {
-			
+	}	
+
+	div[role="content"] {
+		position: relative;
+
+		@include media(">=desktop"){
+			width: 60%;
+			float: right;    
 		}
-	}
+	}	
+
+	
 }
 
+/* Contact area
+=================================================*/
 #home-contact {
-	margin: 2em auto;
-    max-width: 315px;
+	overflow: hidden;
+
+	&>div:first-of-type {
+		min-height: 540px;
+    	background: #aaa;
+    	margin-bottom: 2em;
+
+		@include media(">=desktop"){
+			width: 45%;
+			float: left;
+    		margin-bottom: 0;
+		}
+	}
+
+	&>div:last-of-type {
+		@include media(">=desktop"){
+			width: 45%;
+			float: right;    
+		}
+	}
 }

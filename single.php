@@ -101,8 +101,10 @@
 		</div>
 
 		<section class="entry-footer">
-		<div class="botbuff"><span class="cat-links"><?php _e( 'Categories: ', 'centalpha' ); ?><?php the_category( ', ' ); ?></span></div>
-	</section> 
+			<div class="botbuff">
+				<p class="cat-links"><strong>Categories: </strong><?php the_category( ', ' ); ?></p>
+			</div>
+		</section> 
 	</article>
 	<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>

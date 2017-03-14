@@ -38,11 +38,6 @@
     }
 }
 
-.page-title {
-    text-align: center;
-    width: 100%;
-}
-
 .entry-title {
     color: #14435D;
     font-weight: 700;
@@ -52,7 +47,6 @@
         color: #333;
         text-decoration: none;
         font-family: "futura-pt", helvetica, san-serif;
-        line-height: 1.3em;
 
         &:hover {
             color: #404040;
@@ -91,40 +85,7 @@
         &>li {
             list-style-type: square;
         }
-    }
-
-    p, li {
-        font-size: 1.2em;
-        color: #424747;
-        line-height: 1.6em;
-        font-weight: 400;
-        margin: 20px 5% 20px 0;
-    }
-
-    a {
-        line-height: 1.6em;
-        font-weight: 400;
-        font-size: 1em;
-    }
-
-    blockquote {
-        p {
-            font-size: .8em;
-            line-height: 1.3em;
-            color: #7b8484;
-            @include media(">=tablet") {
-                font-size: .9em;
-            }
-        }
-        a {
-            line-height: 1.3em;
-        }
-    }
-}
-
-.cat-links,
-.tag-links {
-    font-weight: 700;
+    }   
 }
 
 .project-container {
@@ -174,12 +135,8 @@
 }
 
 .entry-footer {
-    margin: 30px 5% 30px 0;
-    font-size: .9em;
+    font-size: 1rem;
     width: 100%;
-    border-top: #333 solid 2px;
-
-    a {
-        font-size: .9em;
-    }
+    border-top: $grayLiteColor solid 2px;
+    font-weight: 400;
 }

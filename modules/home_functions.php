@@ -26,7 +26,7 @@ function ca_populate_home_clips($data){
 	return $ret;
 }
 
-/* #1: Populate home service items
+/* #2: Populate home service items
 ================================================================================*/
 function ca_populate_home_services($data){
 	$ret = '';
@@ -49,6 +49,32 @@ function ca_populate_home_services($data){
 			$ret .= '</div>';
 		$ret .= '</div>';
 	}
+	unset($data);
+	return $ret;
+}
+
+/* #3: Randomly grab a testimonial(s) and populate home page
+================================================================================*/
+function ca_populate_home_testimonial($data){
+	$ret = '';
+	$rand = rand(0, sizeof($data) - 1);
+
+	// build element
+	$ret .= '<div class="home-test">';
+		$ret .= '<div role="image">';
+			$ret .= '<img src="' . $data[$rand]['image']['sizes']['medium'] . '">';
+		$ret .= '</div>';
+		$ret .= '<div role="content">';
+			$ret .= '<div>';
+				$ret .= '<i class="fa fa-quote-left" aria-hidden="true"></i>';
+				$ret .= '<p>' . $data[$rand]['quote'] . '</p>';
+			$ret .= '</div>';
+			$ret .= '<div>';
+				$ret .= '<p>- ' . $data[$rand]['byline'] . '</p>';
+			$ret .= '</div>';
+		$ret .= '</div>';
+	$ret .= '</div>';
+
 	unset($data);
 	return $ret;
 }
