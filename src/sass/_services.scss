@@ -1,2 +1,48 @@
 /* SERVICE STYLES
 ====================================*/
+
+
+
+
+/* SERVICE LIST
+====================================*/
+#service-list {
+
+}
+
+.service-item {
+
+	&>div[role="top"]>div:first-of-type {
+
+	}
+
+	&>div[role="bottom"] {
+		overflow: hidden;
+	}
+
+	&>div[role="bottom"]>div:first-of-type {		
+
+		@include media(">=desktop"){
+			float: left;
+			width: 48%;
+		}
+	}
+
+	&>div[role="bottom"]>div:last-of-type {
+		overflow: hidden;
+		position: relative;
+
+		@include media(">=desktop"){
+			float: right;
+			width: 48%;
+		}
+	}
+
+	p,
+	li,
+	span {
+		font-size: 1.1rem;
+	}
+
+
+}

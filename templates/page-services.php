@@ -19,8 +19,16 @@
 
 
 <section id="content" role="main">
+
+	<!-- Services area -->
+	<section id="service-services">
+		<?php print ca_populate_home_services(get_field('ca_home_services_list', 4433 )); ?>
+	</section>
+
 	<!-- Service List area -->
-	<section id="service-list"></section>
+	<section id="service-list">
+		<?php print ca_populate_services_details(get_field('ca_service_details')); ?>
+	</section>
 
 	<!-- Detailed services area -->
 	<section id="services"></section>

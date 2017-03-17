@@ -4,7 +4,7 @@
 -->	
 <html <?php language_attributes(); ?>>
 <head>
-	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
+	<title><?php wp_title( ' | ', true, 'right' ); ?>DataViz, Interactives, Websites</title>
 	<link rel="shortcut icon" href="<?php echo get_site_url();?>/favicon.ico">
 	<meta name="author" content="John Osborn D'Agostino">
 	<meta name="copyright" content="John Osborn D'Agostino">
