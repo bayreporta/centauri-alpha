@@ -1,0 +1,360 @@
+/* PAGE TEMPLATE STYLES
+/*================================================================================================*/
+
+/* HOME PAGE STYLES
+======================================================================*/
+#content[role="home"],
+#content[role="services"] {	
+
+	h2 {
+		text-transform: uppercase;
+		color: $grayColor;
+		font-size: 1.6rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+
+	&>section {
+		margin-bottom: 2em;
+	}
+}
+
+
+/* Services area (services too)
+--------------------------------*/
+#home-services,
+#service-services {
+	overflow: hidden;
+
+	.home-service {
+		height: 160px;
+		margin-bottom: 1em;
+		padding-bottom: 25em;
+		position: relative;
+
+		@include media(">=tablet"){
+			width: 48%;
+		}
+
+		@include media(">=desktop"){
+			padding-bottom: 0;
+			width: 100%;	
+		}
+	}
+
+	div[role="image"] {
+		width: 50%;
+    	margin: 0 auto;
+
+	   	@include media(">=tablet"){
+			width: 70%;
+		}
+
+		@include media(">=desktop"){
+			width: 20%;
+			float:left;
+		}
+	}
+
+	div[role="content"] {
+
+	   	@include media(">=desktop"){
+			width: 60%;
+			float: left;    
+			margin-left: 2%;
+		}
+	}
+
+	.button-container {
+		position: absolute;
+		left: 50%;
+		@include simple-transform(null, null, -50%);
+
+		@include media(">=tablet", "<=desktop"){
+			min-width: 133px;
+		}
+
+		@include media(">=desktop"){
+			position: relative;
+			left: 0;
+			@include simple-transform(null, null, 0);
+			float: right;    
+			margin: 40px auto;
+		}		
+	}
+
+	p {
+		font-size: 1.1rem;
+	}
+
+	h3 {		
+		text-align: center;
+
+		@include media(">=desktop"){
+			margin: 0 0 10px 0;
+			text-align: left;
+		}		
+	}
+}
+
+/* Clips area (services too)
+--------------------------------*/
+#home-clips {
+	overflow: hidden;
+}
+
+.home-clip,
+.service-clip {
+	padding-bottom: 6em;
+	position: relative;
+	overflow: hidden;
+
+	@include media(">=desktop"){
+		width: 45%;
+		float: left;	
+		padding-bottom: 0;
+
+
+		&:nth-child(even){
+			float: right;
+		}
+	}
+
+	.button-container {
+		position: absolute;
+		left: 50%;
+		@include simple-transform(null, null, -50%);
+	}
+
+	div[role="content"] {
+		width: 80%;
+	    margin: 0 auto;
+	    background-color: #fff;
+	    position: relative;
+	    padding: 20px 10px 0 10px;
+	    top: -20px;
+
+	   	@include media(">=desktop"){
+			padding: 20px 10px 50px 10px;
+			top: -100px;
+		}
+	}		
+
+	p {
+		font-size: 1.1rem;
+	}	
+
+	h3 {
+		margin: 0;
+	    text-align: center;		    
+	}	
+
+	h4 {
+		margin: 10px 0;
+		font-style: italic;
+		color: #aaa;
+		text-align: center;
+	}
+
+	hr {
+		border-bottom: #aaa 1px solid;
+		width: 30%;
+			margin: 1em auto;
+	}
+
+	img {
+		@include media(">=desktop"){
+			max-height:210px;	
+		}
+	}
+}
+
+/* Testimonials area (services too)
+--------------------------------*/
+#home-tests,
+#testimonials {
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 6em;
+
+	.home-test {
+		overflow: hidden;
+	}
+
+	div[role="image"] {
+		width: 50%;
+    	margin: 0 auto;
+
+	   	@include media(">=desktop"){
+			width: 20%;
+			float:left;
+			margin: 0;
+		}
+	}
+
+	div[role="content"] {
+	   	@include media(">=desktop"){
+			width: 70%;
+			float: right;    
+		}
+
+		&>div:first-of-type {
+			position: relative;
+			padding-top: 1em;
+
+			i {
+				color: $grayLiteColor;
+				font-size: 2rem;
+				position: absolute;
+   				left: 0;
+    			top: 5px;
+
+    			@include media(">=desktop"){
+					left: -35px;
+				}
+			}
+
+			p {
+				margin-left: 2em;
+
+				@include media(">=desktop"){
+					margin-left: 0;					  
+				}
+			}
+		}
+
+		&>div:last-of-type {
+			text-align: right;
+			float: right;
+			width: 70%;
+
+			@include media(">=tablet"){
+				width: 100%;
+				float: none;			  
+			}		
+
+			p {
+				color: $grayLiteColor;
+			}
+		}
+	}
+
+	.button-container {
+		position: absolute;
+		left: 50%;
+		@include simple-transform(null, null, -50%);
+	}
+}
+
+/* Bio area
+--------------------------------*/
+#home-bio {
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 6em;
+
+	.button-container {
+		position: absolute;
+    	left: 50%;
+    	@include simple-transform(null, null, -50%);
+	}
+
+	div[role="image"] {
+	   	width: 70%;
+    	margin: 0 auto 1em auto;
+
+	   	@include media(">=desktop"){
+			width: 35%;
+			float:left;
+			margin: 0;
+		}
+
+		img {
+			width: 100%;
+		}
+	}	
+
+	div[role="content"] {
+		position: relative;
+
+		@include media(">=desktop"){
+			width: 60%;
+			float: right;    
+		}
+	}	
+
+	
+}
+
+/* Contact area
+--------------------------------*/
+#home-contact,
+#service-contact {
+	overflow: hidden;
+
+	&>div:first-of-type {
+		min-height: 540px;
+    	background: #aaa;
+    	margin-bottom: 2em;
+
+		@include media(">=desktop"){
+			width: 45%;
+			float: left;
+    		margin-bottom: 0;
+		}
+	}
+
+	&>div:last-of-type {
+		@include media(">=desktop"){
+			width: 45%;
+			float: right;    
+		}
+	}
+}
+
+
+/* SERVICE PAGE STYLES
+===========================================================================*/
+#service-list {
+
+}
+
+.service-item {
+
+	&>div[role="top"] {
+		margin-bottom: 2em;
+	}
+
+	&>div[role="bottom"] {
+		overflow: hidden;
+	}
+
+	&>div[role="bottom"]>div:first-of-type {		
+
+		@include media(">=desktop"){
+			float: left;
+			width: 48%;
+		}
+	}
+
+	&>div[role="bottom"]>div:last-of-type {
+		overflow: hidden;
+		position: relative;
+
+		@include media(">=desktop"){
+			float: right;
+			width: 48%;
+		}
+	}
+
+	p,
+	li,
+	span {
+		font-size: 1.1rem;
+	}
+
+
+}

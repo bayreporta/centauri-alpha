@@ -17,13 +17,13 @@
 	</div>
 </section>
 
-<section id="content" class="content home" role="main">
+<main id="content" role="home">
 
 	<!-- Services area -->
 	<section id="home-services">
 		<h2 class="aligncenter"><?php print get_field('ca_home_service_header'); ?></h2>	
 		<hr class="fancy-line" />	
-		<?php print ca_populate_home_services(get_field('ca_home_services_list')); ?>
+		<?php print ca_populate_services_list(get_field('ca_home_services_list')); ?>
 	</section>
 
 	<!-- Home testimonials area -->
@@ -56,7 +56,7 @@
 		</div>
 	</section>
 
-	<!-- Home home area -->
+	<!-- Home contact area -->
 	<section id="home-contact">
 		<div>
 
@@ -66,7 +66,7 @@
 		</div>
 	</section>
 
-</section>
+</main>
 <?php  $mainImg = get_field('ca_home_main_image'); ?>
 <?php  $mainImgMobile = get_field('ca_home_main_image_mobile'); ?>
 

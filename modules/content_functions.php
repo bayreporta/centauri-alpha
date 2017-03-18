@@ -28,7 +28,7 @@ function ca_populate_home_clips($data, $n = null){
 
 /* #2: Populate home service items
 ================================================================================*/
-function ca_populate_home_services($data){
+function ca_populate_services_list($data){
 	$ret = '';
 	$size = sizeof($data);
 	for ( $i = 0 ; $i < $size ; $i++ ){
@@ -67,7 +67,7 @@ function ca_populate_home_testimonial($data){
 		$ret .= '<div role="content">';
 			$ret .= '<div>';
 				$ret .= '<i class="fa fa-quote-left" aria-hidden="true"></i>';
-				$ret .= '<p>' . $data[$rand]['quote'] . '</p>';
+				$ret .= $data[$rand]['quote'];
 			$ret .= '</div>';
 			$ret .= '<div>';
 				$ret .= '<p>- ' . $data[$rand]['byline'] . '</p>';
@@ -86,20 +86,13 @@ function ca_populate_services_details($data){
 	$size = sizeof($data);
 	for ( $i = 0 ; $i < $size ; $i++ ){
 		$ret .= '<div class="service-item">';
-			$ret .= '<h3>' . $data[$i]['header'] . '</h3>';
+			$ret .= '<h2>' . $data[$i]['header'] . '</h2>';
 			$ret .= '<div role="top">';
 				$ret .= '<div>';
 					$ret .= $data[$i]['content'];
 				$ret .= '</div>';				
 			$ret .= '</div>';
-			$ret .= '<div role="bottom">';				
-				$ret .= '<div>';
-					$ret .= '<ul>';
-						foreach ($data[$i]['points'] as $p) {
-							$ret .= '<li>' . $p['content'] . '</li>';
-						}				
-					$ret .= '</ul>';
-				$ret .= '</div>';
+			$ret .= '<div role="bottom">';	
 				$ret .= '<div class="service-clip">';
 					$ret .= '<div role="image">';
 						$ret .= '<img src="' . $data[$i]['fp_image']['sizes']['large'] . '">';
@@ -113,6 +106,14 @@ function ca_populate_services_details($data){
 							$ret .= '<a href="' . $data[$i]['fp_link'] . '"><div class="button">Explore</div></a>';
 						$ret .= '</div>';
 					$ret .= '</div>';		
+				$ret .= '</div>';			
+				$ret .= '<div>';
+					$ret .= '<h3 class="aligncenter">what I can do for you</h3>';
+					$ret .= '<ul>';
+						foreach ($data[$i]['points'] as $p) {
+							$ret .= '<li>' . $p['content'] . '</li>';
+						}				
+					$ret .= '</ul>';
 				$ret .= '</div>';
 			$ret .= '</div>';
 		$ret .= '</div>';
@@ -121,3 +122,27 @@ function ca_populate_services_details($data){
 	return $ret;
 }
 
+/* #5: Populate testimonials on the services page
+================================================================================*/
+function ca_populate_services_testimonial($data){
+	$ret = '';
+	$size = sizeof($data);
+	for ( $i = 0 ; $i < $size ; $i++ ){
+		$ret .= '<div class="home-test">';
+			$ret .= '<div role="image">';
+				$ret .= '<img src="' . $data[$i]['image']['sizes']['medium'] . '">';
+			$ret .= '</div>';
+			$ret .= '<div role="content">';
+				$ret .= '<div>';
+					$ret .= '<i class="fa fa-quote-left" aria-hidden="true"></i>';
+					$ret .= $data[$i]['quote'];
+				$ret .= '</div>';
+				$ret .= '<div>';
+					$ret .= '<p>- ' . $data[$i]['byline'] . '</p>';
+				$ret .= '</div>';
+			$ret .= '</div>';
+		$ret .= '</div>';
+	}
+	unset($data);
+	return $ret;
+}

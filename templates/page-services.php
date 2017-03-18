@@ -17,29 +17,38 @@
 	</div>
 </section>
 
+<main id="content" role="services">
 
-<section id="content" role="main">
-
-	<!-- Services area -->
+	<!-- Services List area -->
 	<section id="service-services">
-		<?php print ca_populate_home_services(get_field('ca_home_services_list', 4433 )); ?>
+		<h2 class="aligncenter"><?php print get_field('ca_home_service_header', 4433 ); ?></h2>	
+		<hr class="fancy-line" />	
+		<?php print ca_populate_services_list(get_field('ca_home_services_list', 4433 )); ?>
 	</section>
-
-	<!-- Service List area -->
+	
+	<!-- Detailed services area -->
 	<section id="service-list">
 		<?php print ca_populate_services_details(get_field('ca_service_details')); ?>
-	</section>
-
-	<!-- Detailed services area -->
-	<section id="services"></section>
+	</section>	
 
 	<!-- Testimonials area -->
-	<section id="testimonials"></section>
+	<section id="testimonials">
+		<h2 class="aligncenter">What Clients Said</h2>	
+		<hr class="fancy-line" />	
+		<?php print ca_populate_services_testimonial(get_field('ca_testimonial_list')); ?>
+	</section>
 
 	<!-- Contact information area -->
-	<section id="contact"></section>
+	<section id="service-contact">
+		<div>
 
-</section>
+		</div>
+		<div>
+			<?php print get_field('ca_contact_form_code', 4433); ?>
+		</div>
+	</section>
+
+</main>
 
 <script type="text/javascript">
 	jQuery(document).ready(function(){		
