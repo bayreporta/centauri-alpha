@@ -8,8 +8,10 @@
 	</div>
 	<div role="content">
 		<?php print get_field( 'ca_bio_content', 4433 ); ?>
-		<div class="button-container">
-			<a href="<?php echo get_site_url(); ?>/about-me/"><div class="button">Learn More</div></a>
-		</div>
+		<?php if ( get_the_ID() === 4433 ) : ?>
+			<div class="button-container">
+				<a href="<?php echo get_site_url(); ?>/about-me/"><div class="button">Learn More</div></a>
+			</div>	
+		<?php endif; ?>
 	</div>
 </section>

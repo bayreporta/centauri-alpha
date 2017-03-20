@@ -5,7 +5,8 @@
 */
 
 #content[role="home"],
-#content[role="services"] {	
+#content[role="services"],
+#content[role="about"] {	
 
 	h2 {
 		text-transform: uppercase;
@@ -23,11 +24,16 @@
 	}
 }
 
+.entry-segment {
+	margin-bottom: 1em;
+	position: relative;
+	overflow: hidden;
+}
+
 
 /* Service List Segment
 --------------------------------*/
 .entry-segment[role="service-list"] {
-	overflow: hidden;
 
 	.service-list-item {
 		height: 160px;
@@ -35,11 +41,11 @@
 		padding-bottom: 25em;
 		position: relative;
 
-		@include media(">=tablet"){
+		@include media( ">=tablet" ){
 			width: 48%;
 		}
 
-		@include media(">=desktop"){
+		@include media( ">=desktop" ){
 			padding-bottom: 0;
 			width: 100%;	
 		}
@@ -49,11 +55,11 @@
 		width: 50%;
     	margin: 0 auto;
 
-	   	@include media(">=tablet"){
+	   	@include media( ">=tablet" ){
 			width: 70%;
 		}
 
-		@include media(">=desktop"){
+		@include media( ">=desktop" ){
 			width: 20%;
 			float:left;
 		}
@@ -61,7 +67,7 @@
 
 	div[role="content"] {
 
-	   	@include media(">=desktop"){
+	   	@include media( ">=desktop" ){
 			width: 60%;
 			float: left;    
 			margin-left: 2%;
@@ -104,14 +110,13 @@
 --------------------------------*/
 .entry-segment[role="clips"],
 .service-item {
-	overflow: hidden;
 
 	.clip {
 		padding-bottom: 6em;
 		position: relative;
 		overflow: hidden;
 
-		@include media(">=desktop"){
+		@include media( ">=desktop" ){
 			width: 45%;
 			float: left;	
 			padding-bottom: 0;
@@ -136,7 +141,7 @@
 		    padding: 20px 10px 0 10px;
 		    top: -20px;
 
-		   	@include media(">=desktop"){
+		   	@include media( ">=desktop" ){
 				padding: 20px 10px 50px 10px;
 				top: -100px;
 			}
@@ -165,7 +170,7 @@
 		}
 
 		img {
-			@include media(">=desktop"){
+			@include media( ">=desktop" ){
 				max-height:210px;	
 			}
 		}
@@ -175,8 +180,6 @@
 /* Testimonials Segment
 --------------------------------*/
 .entry-segment[role="testimonials"] {
-	overflow: hidden;
-	position: relative;
 	padding-bottom: 6em;
 
 	.testimonial {
@@ -187,7 +190,7 @@
 		width: 50%;
     	margin: 0 auto;
 
-	   	@include media(">=desktop"){
+	   	@include media( ">=desktop" ){
 			width: 20%;
 			float:left;
 			margin: 0;
@@ -195,7 +198,7 @@
 	}
 
 	div[role="content"] {
-	   	@include media(">=desktop"){
+	   	@include media( ">=desktop" ){
 			width: 70%;
 			float: right;    
 		}
@@ -211,7 +214,7 @@
    				left: 0;
     			top: 5px;
 
-    			@include media(">=desktop"){
+    			@include media( ">=desktop" ){
 					left: -35px;
 				}
 			}
@@ -219,7 +222,7 @@
 			p {
 				margin-left: 2em;
 
-				@include media(">=desktop"){
+				@include media( ">=desktop" ){
 					margin-left: 0;					  
 				}
 			}
@@ -230,7 +233,7 @@
 			float: right;
 			width: 70%;
 
-			@include media(">=tablet"){
+			@include media( ">=tablet" ){
 				width: 100%;
 				float: none;			  
 			}		
@@ -244,30 +247,28 @@
 	.button-container {
 		position: absolute;
 		left: 50%;
-		@include simple-transform( null, null, -50%);
+		@include simple-transform( null, null, -50% );
 	}
 }
 
 /* Bio Segment
 --------------------------------*/
 .entry-segment[role="bio"] {
-	overflow: hidden;
-	position: relative;
 	padding-bottom: 6em;
 
 	.button-container {
 		position: absolute;
     	left: 50%;
-    	@include simple-transform( null, null, -50%);
+    	@include simple-transform( null, null, -50% );
 	}
 
 	div[role="image"] {
 	   	width: 70%;
     	margin: 0 auto 1em auto;
 
-	   	@include media(">=desktop"){
-			width: 35%;
-			float:left;
+	   	@include media( ">=desktop" ){
+			width: 30%;
+			float: left;
 			margin: 0;
 		}
 
@@ -279,19 +280,19 @@
 	div[role="content"] {
 		position: relative;
 
-		@include media(">=desktop"){
+		@include media( ">=desktop" ){
 			width: 60%;
 			float: right;    
 		}
 	}	
-
-	
+}
+#content[role="about"] .entry-segment[role="bio"] {
+	padding-bottom: 0;
 }
 
 /* Contact Segment
 --------------------------------*/
 .entry-segment[role="contact"] {
-	overflow: hidden;
 
 	&>div:first-of-type {
 		min-height: 540px;
@@ -313,50 +314,90 @@
 	}
 }
 
-
-
-
-
-
-/* Clip Segment
+/* About Details Segment
 --------------------------------*/
-#service-list {
+.entry-segment[role="about"] {
 
 }
 
-.service-item {
+/* About Work Segment
+--------------------------------*/
+.entry-segment[role="work"] {
+	&>div[role="content"] {
+		display: flex;
+		flex-flow: row wrap;
 
-	&>div[role="top"] {
-		margin-bottom: 2em;
 	}
 
-	&>div[role="bottom"] {
-		overflow: hidden;
-	}
+	article {
+		width: 45%;
+		flex-grow: 1;
+    	flex-basis: auto;
 
-	&>div[role="bottom"]>div:first-of-type {		
-
-		@include media(">=desktop"){
-			float: left;
-			width: 48%;
+		@include media( ">=desktop" ){
+			width: 30%;    		
 		}
 	}
 
-	&>div[role="bottom"]>div:last-of-type {
-		overflow: hidden;
-		position: relative;
+	.about-work {
 
-		@include media(">=desktop"){
-			float: right;
-			width: 48%;
+		&>div[role="image"] {
+			display: block;
+			margin: 0 auto;
+			width: 150px;
+			height: 150px;
+		}
+
+		&>div[role="content"] {
+			text-align: center;
+
+			h3 {
+				color: $oldColor;
+
+				&:hover {
+					color: $oldHoverColor;
+				}
+			}
+		}
+
+	}
+}
+
+
+/* Service Details Segment
+--------------------------------*/
+.entry-segment[role="service-details"] {
+	.service-item {
+		&>div[role="top"] {
+			margin-bottom: 2em;
+		}
+
+		&>div[role="bottom"] {
+			overflow: hidden;
+		}
+
+		&>div[role="bottom"]>div:first-of-type {		
+
+			@include media( ">=desktop" ){
+				float: left;
+				width: 48%;
+			}
+		}
+
+		&>div[role="bottom"]>div:last-of-type {
+			overflow: hidden;
+			position: relative;
+
+			@include media( ">=desktop" ){
+				float: right;
+				width: 48%;
+			}
+		}
+
+		p,
+		li,
+		span {
+			font-size: 1.1rem;
 		}
 	}
-
-	p,
-	li,
-	span {
-		font-size: 1.1rem;
-	}
-
-
 }

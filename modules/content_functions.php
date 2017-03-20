@@ -131,3 +131,18 @@ function ca_populate_services_details( $data ){
 	unset( $data, $image, $url );
 	return $ret;
 }
+
+/* #6: Populate about details on about page
+================================================================================*/
+function centalpha_populate_about_details($data){
+	$ret = '';
+	$size = sizeof( $data );
+	for ( $i = 0 ; $i < $size ; $i++ ){
+		$ret .= '<div class="about-details">';
+			$ret .= '<h3>' . $data[$i][ 'header' ] . '</h3>';	
+			$ret .= $data[$i][ 'content' ];		
+		$ret .= '</div>';
+	}
+	unset( $data );
+	return $ret;
+}

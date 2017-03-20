@@ -9,7 +9,7 @@
 	<?php get_template_part( 'templates/entry/entry', 'service_list' ) ?>
 	
 	<!-- Detailed services area -->
-	<section id="service-list">
+	<section class="entry-segment" role="service-details">
 		<?php print ca_populate_services_details( get_field( 'ca_service_details' ) ); ?>
 	</section>	
 
