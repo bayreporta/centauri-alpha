@@ -1,8 +1,9 @@
-/* PAGE TEMPLATE STYLES
-/*================================================================================================*/
+/**
+* #.# Page Template Styles
+*
+* Styles related to special page templates and the segments therein
+*/
 
-/* HOME PAGE STYLES
-======================================================================*/
 #content[role="home"],
 #content[role="services"] {	
 
@@ -23,7 +24,7 @@
 }
 
 
-/* Services area (services too)
+/* Service List Segment
 --------------------------------*/
 .entry-segment[role="service-list"] {
 	overflow: hidden;
@@ -99,79 +100,79 @@
 	}
 }
 
-/* Clips area (services too)
+/* Clip Segment
 --------------------------------*/
-#home-clips {
-	overflow: hidden;
-}
-
-.home-clip,
-.service-clip {
-	padding-bottom: 6em;
-	position: relative;
+.entry-segment[role="clips"],
+.service-item {
 	overflow: hidden;
 
-	@include media(">=desktop"){
-		width: 45%;
-		float: left;	
-		padding-bottom: 0;
+	.clip {
+		padding-bottom: 6em;
+		position: relative;
+		overflow: hidden;
 
-
-		&:nth-child(even){
-			float: right;
-		}
-	}
-
-	.button-container {
-		position: absolute;
-		left: 50%;
-		@include simple-transform(null, null, -50%);
-	}
-
-	div[role="content"] {
-		width: 80%;
-	    margin: 0 auto;
-	    background-color: #fff;
-	    position: relative;
-	    padding: 20px 10px 0 10px;
-	    top: -20px;
-
-	   	@include media(">=desktop"){
-			padding: 20px 10px 50px 10px;
-			top: -100px;
-		}
-	}		
-
-	p {
-		font-size: 1.1rem;
-	}	
-
-	h3 {
-		margin: 0;
-	    text-align: center;		    
-	}	
-
-	h4 {
-		margin: 10px 0;
-		font-style: italic;
-		color: #aaa;
-		text-align: center;
-	}
-
-	hr {
-		border-bottom: #aaa 1px solid;
-		width: 30%;
-			margin: 1em auto;
-	}
-
-	img {
 		@include media(">=desktop"){
-			max-height:210px;	
+			width: 45%;
+			float: left;	
+			padding-bottom: 0;
+
+
+			&:nth-child(even){
+				float: right;
+			}
+		}
+
+		.button-container {
+			position: absolute;
+			left: 50%;
+			@include simple-transform( null, null, -50% );
+		}
+
+		div[role="content"] {
+			width: 80%;
+		    margin: 0 auto;
+		    background-color: #fff;
+		    position: relative;
+		    padding: 20px 10px 0 10px;
+		    top: -20px;
+
+		   	@include media(">=desktop"){
+				padding: 20px 10px 50px 10px;
+				top: -100px;
+			}
+		}		
+
+		p {
+			font-size: 1.1rem;
+		}	
+
+		h3 {
+			margin: 0;
+		    text-align: center;		    
+		}	
+
+		h4 {
+			margin: 10px 0;
+			font-style: italic;
+			color: #aaa;
+			text-align: center;
+		}
+
+		hr {
+			border-bottom: #aaa 1px solid;
+			width: 30%;
+				margin: 1em auto;
+		}
+
+		img {
+			@include media(">=desktop"){
+				max-height:210px;	
+			}
 		}
 	}
 }
 
-/* Testimonials area (services too)
+/* Testimonials Segment
 --------------------------------*/
 #home-tests,
 #testimonials {
@@ -244,11 +245,11 @@
 	.button-container {
 		position: absolute;
 		left: 50%;
-		@include simple-transform(null, null, -50%);
+		@include simple-transform( null, null, -50%);
 	}
 }
 
-/* Bio area
+/* Bio Segment
 --------------------------------*/
 .entry-segment[role="bio"] {
 	overflow: hidden;
@@ -258,7 +259,7 @@
 	.button-container {
 		position: absolute;
     	left: 50%;
-    	@include simple-transform(null, null, -50%);
+    	@include simple-transform( null, null, -50%);
 	}
 
 	div[role="image"] {
@@ -288,7 +289,7 @@
 	
 }
 
-/* Contact area
+/* Contact Segment
 --------------------------------*/
 .entry-segment[role="contact"] {
 	overflow: hidden;
@@ -298,7 +299,7 @@
     	background: #aaa;
     	margin-bottom: 2em;
 
-		@include media(">=desktop"){
+		@include media( ">=desktop" ){
 			width: 45%;
 			float: left;
     		margin-bottom: 0;
@@ -306,7 +307,7 @@
 	}
 
 	&>div:last-of-type {
-		@include media(">=desktop"){
+		@include media( ">=desktop" ){
 			width: 45%;
 			float: right;    
 		}
@@ -314,8 +315,12 @@
 }
 
 
-/* SERVICE PAGE STYLES
-===========================================================================*/
+
+
+
+
+/* Clip Segment
+--------------------------------*/
 #service-list {
 
 }

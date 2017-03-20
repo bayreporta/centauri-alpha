@@ -1,13 +1,13 @@
 <?php 
 
-/* #1: Populate home featured clips
+/* #1: Populate featured clips style
 ================================================================================*/
-function ca_populate_home_clips($data, $n = null){
+function ca_populate_clips($data, $n = null){
 	$ret = '';
 
 	$size = sizeof($data);
 	for ( $i = 0 ; $i < $size ; $i++ ){
-		$ret .= '<div class="home-clip">';
+		$ret .= '<div class="clip">';
 			$ret .= '<div role="image">';
 				$ret .= '<img src="' . $data[$i]['image']['sizes']['large'] . '">';
 			$ret .= '</div>';
@@ -93,7 +93,7 @@ function ca_populate_services_details($data){
 				$ret .= '</div>';				
 			$ret .= '</div>';
 			$ret .= '<div role="bottom">';	
-				$ret .= '<div class="service-clip">';
+				$ret .= '<div class="clip">';
 					$ret .= '<div role="image">';
 						$ret .= '<img src="' . $data[$i]['fp_image']['sizes']['large'] . '">';
 					$ret .= '</div>';

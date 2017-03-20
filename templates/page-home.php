@@ -31,13 +31,7 @@
 	</section>
 
 	<!-- Clips area -->
-	<section id="home-clips">
-		<h2 class="aligncenter">
-			<?php print get_field( 'ca_home_clip_header' ); ?>
-		</h2>
-		<hr class="fancy-line" />	
-		<?php print ca_populate_home_clips( get_field( 'ca_home_clip_list' ) ); ?>
-	</section>
+	<?php get_template_part( 'templates/entry/entry', 'clips' ) ?>
 
 	<!-- Bio area -->
 	<?php get_template_part( 'templates/entry/entry', 'bio' ) ?>
