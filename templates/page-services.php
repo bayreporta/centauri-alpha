@@ -28,15 +28,11 @@
 	</section>	
 
 	<!-- Testimonials area -->
-	<section id="testimonials">
-		<h2 class="aligncenter">What Clients Said</h2>	
-		<hr class="fancy-line" />	
-		<?php print ca_populate_services_testimonial( get_field( 'ca_testimonial_list' ) ); ?>
-	</section>
-
+	<?php get_template_part( 'templates/entry/entry', 'testimonials' ) ?>
+	
 	<!-- Contact area -->
 	<?php get_template_part( 'templates/entry/entry', 'contact' ) ?>
-	
+
 </main>
 
 <!-- main image script -->

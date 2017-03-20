@@ -23,13 +23,8 @@
 	<?php get_template_part( 'templates/entry/entry', 'service-list' ) ?>
 
 	<!-- Testimonials area -->
-	<section id="home-tests">
-		<?php print ca_populate_home_testimonial( get_field( 'ca_testimonial_list' , 4507 ) ); ?>
-		<div class="button-container">
-			<a href="<?php echo get_site_url(); ?>/about-me/"><div class="button">Read More</div></a>
-		</div>
-	</section>
-
+	<?php get_template_part( 'templates/entry/entry', 'testimonials' ) ?>
+	
 	<!-- Clips area -->
 	<?php get_template_part( 'templates/entry/entry', 'clips' ) ?>
 

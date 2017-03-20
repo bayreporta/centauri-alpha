@@ -174,13 +174,12 @@
 
 /* Testimonials Segment
 --------------------------------*/
-#home-tests,
-#testimonials {
+.entry-segment[role="testimonials"] {
 	overflow: hidden;
 	position: relative;
 	padding-bottom: 6em;
 
-	.home-test {
+	.testimonial {
 		overflow: hidden;
 	}
 
