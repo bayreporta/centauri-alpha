@@ -44,6 +44,14 @@ function cantalpha_load_scripts()
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'tiny_mce' );
 	wp_enqueue_script( 'pym' , '/wp-content/themes/centauri-alpha/scripts/pym.v1.min.js' );
+	wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/scripts/ajax-index.js', array( 'jquery' ) );
+	
+	//AJAX calls for posts
+	global $wp_query;
+	wp_localize_script( 'ajax-pagination', 'ajaxpagination', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'query_vars' => json_encode( $wp_query->query )
+	));
 }
 
 
@@ -71,3 +79,51 @@ function centalpha_comments_number( $count ){
 		return $count;
 	}
 }
+
+/* #5: Dynamic loading of index page posts
+---------------------------------------------------------------------------*/
+add_action( 'wp_ajax_nopriv_ajax_pagination', 'ca_ajax_pagination' );
+add_action( 'wp_ajax_ajax_pagination', 'ca_ajax_pagination' );
+
+function ca_ajax_pagination() {
+    echo get_bloginfo( 'title' );
+    die();
+}
+
+
+
+function ca_load_more_index_posts() {
+
+   /* $query_vars = json_decode( stripslashes( $_POST['query_vars'] ), true );
+
+    $query_vars['paged'] = $_POST['page'];
+
+
+    $posts = new WP_Query( $query_vars );
+    $GLOBALS['wp_query'] = $posts;
+
+    add_filter( 'editor_max_image_size', 'my_image_size_override' );
+
+    if( ! $posts->have_posts() ) { 
+        get_template_part( 'content', 'none' );
+    }
+    else {
+        while ( $posts->have_posts() ) { 
+            $posts->the_post();
+            get_template_part( 'content', get_post_format() );
+        }
+    }
+    remove_filter( 'editor_max_image_size', 'my_image_size_override' );
+
+    the_posts_pagination( array(
+        'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
+        'next_text'          => __( 'Next page', 'twentyfifteen' ),
+        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+    ) );
+
+    die();*/
+}
+
+/*function my_image_size_override() {
+    return array( 825, 510 );
+}*/

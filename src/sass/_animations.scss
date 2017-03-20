@@ -1,0 +1,23 @@
+/* ANIMATION STYLES
+====================================*/
+
+.loader-spin {
+    @include animation-name('loader');
+    @include animation-iteration-count(infinite);
+    @include animation-play-state(running);
+    @include animation-duration(1s);
+    @include animation-timing-function(linear);
+}
+
+@include keyframes(loader){
+    0% {
+        @include simple-transform( null , 0deg );
+    }
+    50% {
+        @include simple-transform( null , 180deg );
+    }
+    100%{
+        @include simple-transform( null , 360deg );
+    }
+}
+

@@ -36,8 +36,8 @@
 			</article>
 			<?php endwhile; ?>
 			<div class="button-container">
-				<a href="#"><div class="button index-button">back to the past</div></a>
-				<a href="#"><div class="button index-button">toward the future</div></a>
+				<a href="#" class="index-button" data-page-next="2" data-page-prev="0" data-direction="next"><div class="button">back to the past <i class="fa fa-refresh" aria-hidden="true"></i></div></a>
+				<a href="#" class="index-button" data-page-next="2" data-page-prev="0" data-direction="prev"><div class="button">toward the future <i class="fa fa-refresh" aria-hidden="true"></i></div></a>
 			</div>
 	</div>
 </main>
