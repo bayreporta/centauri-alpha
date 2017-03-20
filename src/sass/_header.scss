@@ -14,14 +14,11 @@
 }
 
 #branding {
+    font-size: 1.1rem;
     position: absolute;
     left:10px;
     top: 50%;
 	@include simple-transform(null, null, null, -50%);
-
-    @include media(">=tablet"){
-    	
-    }
 
     a {
     	color:#fff;
@@ -82,13 +79,14 @@
     }
 
     a {
+        font-size: 1.1rem;
+
 		@include media($phone...){
 			color: #fff;
 		}
 
 	    @include media(">=tablet"){
 	    	color: #fff;
-        	font-size: 1.2rem;
 
         	&:hover {
 		        border-bottom: #fff 1px solid;
