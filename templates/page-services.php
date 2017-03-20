@@ -34,15 +34,9 @@
 		<?php print ca_populate_services_testimonial( get_field( 'ca_testimonial_list' ) ); ?>
 	</section>
 
-	<!-- Contact information area -->
-	<section id="service-contact">
-		<div>
-
-		</div>
-		<div>
-			<?php print get_field( 'ca_contact_form_code', 4433 ); ?>
-		</div>
-	</section>
+	<!-- Contact area -->
+	<?php get_template_part( 'templates/entry/entry', 'contact' ) ?>
+	
 </main>
 
 <!-- main image script -->

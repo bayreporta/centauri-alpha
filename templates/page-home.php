@@ -22,7 +22,7 @@
 	<!-- Services area -->
 	<?php get_template_part( 'templates/entry/entry', 'service-list' ) ?>
 
-	<!-- Home testimonials area -->
+	<!-- Testimonials area -->
 	<section id="home-tests">
 		<?php print ca_populate_home_testimonial( get_field( 'ca_testimonial_list' , 4507 ) ); ?>
 		<div class="button-container">
@@ -30,7 +30,7 @@
 		</div>
 	</section>
 
-	<!-- Featured clips area -->
+	<!-- Clips area -->
 	<section id="home-clips">
 		<h2 class="aligncenter">
 			<?php print get_field( 'ca_home_clip_header' ); ?>
@@ -39,18 +39,12 @@
 		<?php print ca_populate_home_clips( get_field( 'ca_home_clip_list' ) ); ?>
 	</section>
 
-	<!-- Home bio area -->
+	<!-- Bio area -->
 	<?php get_template_part( 'templates/entry/entry', 'bio' ) ?>
 
-	<!-- Home contact area -->
-	<section id="home-contact">
-		<div>
-
-		</div>
-		<div>
-			<?php print get_field( 'ca_contact_form_code' ); ?>
-		</div>
-	</section>
+	<!-- Contact area -->
+	<?php get_template_part( 'templates/entry/entry', 'contact' ) ?>
+	
 </main>
 
 <!-- main image script -->

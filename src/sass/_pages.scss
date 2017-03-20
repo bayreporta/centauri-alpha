@@ -290,8 +290,7 @@
 
 /* Contact area
 --------------------------------*/
-#home-contact,
-#service-contact {
+.entry-segment[role="contact"] {
 	overflow: hidden;
 
 	&>div:first-of-type {
