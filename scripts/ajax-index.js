@@ -3,7 +3,7 @@
 (function(jQuery) {
 
 	function resolve_pagination( e ) {
-		var p = parseInt( e.attr( 'data-page-next' ) );
+		var p = parseInt( e.attr( 'data-page' ) );
 		e.attr( 'data-page' , p + 1 );
 		return p;
 	}

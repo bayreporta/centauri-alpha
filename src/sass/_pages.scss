@@ -25,11 +25,10 @@
 
 /* Services area (services too)
 --------------------------------*/
-#home-services,
-#service-services {
+.entry-segment[role="service-list"] {
 	overflow: hidden;
 
-	.home-service {
+	.service-list-item {
 		height: 160px;
 		margin-bottom: 1em;
 		padding-bottom: 25em;
@@ -251,7 +250,7 @@
 
 /* Bio area
 --------------------------------*/
-#home-bio {
+.entry-segment[role="bio"] {
 	overflow: hidden;
 	position: relative;
 	padding-bottom: 6em;

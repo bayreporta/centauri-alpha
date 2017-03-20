@@ -32,7 +32,7 @@ function ca_populate_services_list($data){
 	$ret = '';
 	$size = sizeof($data);
 	for ( $i = 0 ; $i < $size ; $i++ ){
-		$ret .= '<div class="home-service">';
+		$ret .= '<div class="service-list-item">';
 			$ret .= '<div role="image">';
 				$ret .= '<img src="' . $data[$i]['image']['sizes']['thumbnail'] . '">';
 			$ret .= '</div>';

@@ -16,9 +16,9 @@
 				'cache_results' => true
 		);
 		$query = new WP_Query( $args );
-		ca_localize_ajax_script( $args );		
+		centalpha_localize_ajax_script( $args );		
 		while ($query->have_posts()) : $query->the_post();?>			
-			<?php get_template_part( 'templates/entry' , 'index' ); ?>
+			<?php get_template_part( 'templates/entry/entry' , 'index' ); ?>
 		<?php endwhile; ?>
 		<div class="button-container">
 			<a href="#" class="index-button" data-page="2"><div class="button">load more posts <i class="fa fa-refresh" aria-hidden="true"></i></div></a>

@@ -16,12 +16,7 @@
 	<meta name="revisit" content="after 1 days">
 	<meta name="keywords" lang="en" content="Wordpress development, data visualization, front end development, portfolio, journalist, web developer, San Francisco Bay Area, California, Sacramento, Davis">
 	<meta name="viewport" content="width=device-width" />
-
-	<!-- Typekit, font awesome, main stylesheet loads -->
-	<script src="https://use.typekit.net/cta0jll.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/style.css" />
-	<script src="https://use.fontawesome.com/4ac2a9e804.js"></script>
 
 	<?php wp_head(); ?>
 </head>
