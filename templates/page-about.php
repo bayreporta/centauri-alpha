@@ -17,12 +17,7 @@
 	<?php get_template_part( 'templates/entry/entry', 'about_work' ) ?>
 	
 	<!-- Skills area -->
-	<section class="entry-segment" role="skills">
-		<h2 class="aligncenter">
-			<?php print get_field( 'ca_about_skills_header' ); ?>
-		</h2>
-		<hr class="fancy-line" />	
-	</section>
+	<?php get_template_part( 'templates/entry/entry', 'about_skills' ) ?>
 
 	<!-- Contact area -->
 	<?php get_template_part( 'templates/entry/entry', 'contact' ) ?>

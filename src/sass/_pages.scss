@@ -314,19 +314,32 @@
 	}
 }
 
-/* About Details Segment
+/* About Skills Segment
 --------------------------------*/
-.entry-segment[role="about"] {
+.entry-segment[role="skills"] {
 
+	&>div[role="flex"] {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.about-details {
+		width: 100%;
+		flex-grow: 1;
+    	flex-basis: auto;
+
+		@include media( ">=tablet" ){
+			width: 45%;    		
+		}
+	}
 }
 
 /* About Work Segment
 --------------------------------*/
 .entry-segment[role="work"] {
-	&>div[role="content"] {
+	&>div[role="flex"] {
 		display: flex;
 		flex-flow: row wrap;
-
 	}
 
 	article {
