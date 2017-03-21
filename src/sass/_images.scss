@@ -1,5 +1,9 @@
-/* IMAGE STYLES
-====================================*/
+/**
+* #.# Image Styles
+*
+* Handling most of the image styles on the website
+*/
+
 .post-thumb {
     width: 100%;
 
@@ -44,23 +48,6 @@
     }
 }
 
-.page-header .attachment-post-thumbnail {
-    @include media(">=tablet"){
-        width: 100%;
-        float: none;
-        margin: 25px 0
-    }
-}
-
-.page-no-header .attachment-post-thumbnail {
-    width: 95%;
-    height: auto;
-    margin: 0px auto 20px auto;
-    display: block;
-    max-width: 300px;
-    padding: 0 2%;
-}
-
 .wp-caption {
     margin: 10px 5%;
     width:100%;
@@ -89,21 +76,27 @@
     max-width:850px;
 }
 
-.wp-caption-text {
-    padding-bottom: 10px;
-    font-style: italic;
-    color: #aaa;
+.entry-content {
+
+    .wp-caption {
+        margin: 0 auto;
+        display: block;
+        margin: 2rem auto;
+    }
+
+    .wp-caption-text {
+        margin: 10px 0 0 0;
+        padding: 4px 0 0 0;
+        text-align: left;    
+        border-top: #aaa solid 1px;
+        font-size: 1rem;
+        font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
+        color: $grayColor;
+    }
 }
 
-#home-content .attachment-small {
-    max-width: 395px;
-    padding: 10px 1%;
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-}
-
-img.aligncenter {
+img.aligncenter,
+.wp-caption.aligncenter {
     text-align: none;
     margin: 1rem auto;
     display: block;
@@ -115,9 +108,9 @@ img.aligncenter {
     }
 }
 
-img.alignleft {
-    text-align: none;
-    margin: 1rem auto;
+img.alignleft,
+.wp-caption.alignleft {
+    margin: 1em 1em 1em 0;
     display: block;
 
     @include media(">=tablet"){
@@ -127,9 +120,9 @@ img.alignleft {
     }
 }
 
-img.alignright {
-    text-align: none;
-    margin: 1rem auto;
+img.alignright,
+.wp-caption.alignright {
+    margin: 1em 0 1em 1em;
     display: block;
 
     @include media(">=desktop"){
@@ -137,20 +130,4 @@ img.alignright {
         display: block;
         float: right;
     }
-}
-
-.entry-content div.wp-caption {
-    margin: 0 auto;
-    display: block;
-    margin: 2rem auto;
-}
-
-.entry-content .wp-caption-text {
-    margin: 10px 0 0 0;
-    padding: 4px 0 0 0;
-    border-top: #aaa solid 1px;
-    font-size: .8em;
-    font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
-    color: #424747;
-    text-align: left;
 }
