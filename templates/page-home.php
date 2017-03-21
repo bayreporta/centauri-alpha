@@ -23,6 +23,6 @@
 </main>
 
 <!-- main image script -->
-<?php get_template_part( 'templates/script', 'main_image' ); ?>
+<?php get_template_part( 'templates/scripts/script', 'main_image' ); ?>
 
 <?php get_footer(); ?>

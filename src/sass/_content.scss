@@ -1,5 +1,9 @@
-/* BASE CONTENT STYLES
-====================================*/
+/**
+* #.# Base Content Styles
+*
+* Base styles for all index, single, page templates
+*/
+
 #content {
     width: 90%;
     padding: 10px 0;
@@ -9,64 +13,17 @@
         width: 60%;
         max-width: 850px;
     }
-
-    /*article {
-        @include media(">=tablet"){
-            &>section {
-                width: 60%;
-            }
-            &>aside {
-                width: 40%;
-                float: right;
-            }
-        }
-    }*/
-
-    .thick:last-of-type:not(.index-buff),
-    .thin:last-of-type {
-        display: none;
-    }
-}
-
-.entry-summary {
-    p {
-        font-size: 1em;
-        color: #424747;
-        line-height: 1.6em;
-        font-weight: 400;
-        margin: 20px 0;
-    }
 }
 
 .entry-title {
-    color: #14435D;
-    font-weight: 700;
-    margin: 25px 5% 0 0;
-
-    a {
-        color: #333;
-        text-decoration: none;
-        font-family: "futura-pt", helvetica, san-serif;
-
-        &:hover {
-            color: #404040;
-            text-decoration: underline;
-        }
-    }
+    
 }
 
 .entry-meta {
-    margin: 0 5% 1em 0;
-    width: 100%;
 
     .author,
     .entry-date {
-        font-size: .9em;
-        font-family: "futura-pt", helvetica, san-serif;
-    }
 
-    &>div:first-of-type span {
-        color: #666;
     }
 }
 
@@ -76,132 +33,10 @@
 }
 
 .entry-content {
-    width: 100%;
-    overflow: hidden; 
+ 
 }
 
 .entry-footer {
-    font-size: 1rem;
-    width: 100%;
-    border-top: $grayLiteColor solid 2px;
-    font-weight: 400;
+
 }
 
-/* PROJECT STYLES
-====================================*/
-.project-container {
-    margin: 0 auto;
-    width: 100%;
-    flex-flow: row wrap;
-
-    .project-item {
-        width: 100%;
-        margin-bottom: 2rem;
-
-        @include media(">=desktop"){
-            width: 45%;
-            margin-right: 5%;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            margin: 0;
-
-            a {
-                font-size: inherit;
-                font-weight: inherit;
-
-                i {
-                    padding-left: 2%;
-                    font-size: 1rem;
-                    color: #666;
-                }
-            }
-        }
-
-        p.meta {
-            color: #aaa;
-            font-size: .9em;
-            margin: 0;
-        }
-
-        p.tags {
-            margin: 0;
-        }
-
-        p a {
-            font-size: 1rem;
-        }
-    }
-}
-
-/* FEATURED IMAGE ON PAGE STYLES
-====================================*/
-.main-image {
-    position: relative;    
-    background: #292929;
-
-    &>div:first-of-type, &>div:nth-of-type(2) {
-        position: absolute;
-        z-index:100;
-        width: 95%;
-        left: 2.5%;
-        right: 2.5%;
-    }
-
-    /* main header */
-    &>div:first-of-type {           
-        top: 20%;
-        @include simple-transform(null, null, null, -20%);
-
-        @include media(">=tablet"){
-            top: 40%;
-            @include simple-transform(null, null, null, -50%);
-        }
-
-        h1 {
-            color: #fff;
-            font-size: 2rem;
-
-            @include media(">=tablet", "<desktop"){
-                font-size: 2.5rem;
-            }
-
-            @include media(">=desktop"){
-                font-size: 3rem;
-            }
-        }
-    }
-
-    /* secondary header */
-    &>div:nth-of-type(2) {              
-        top: 80%;
-        @include simple-transform(null, null, null, -80%);
-
-        @include media(">=tablet", "<desktop"){
-            top: 60%;
-            @include simple-transform(null, null, null, -60%);
-        }
-
-        @include media(">=desktop"){
-            top: 50%;
-            @include simple-transform(null, null, null, -50%);
-        }
-
-        h2 {
-            color: #fff;
-            text-transform: lowercase;
-            font-weight: 400;
-            font-size: 1.2rem;
-
-            @include media(">=tablet"){
-                font-size: 2rem;
-            }
-        }
-    }
-
-    /* image itself */
-    &>div:last-of-type {
-        opacity: .5;
-    }   
-}
