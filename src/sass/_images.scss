@@ -34,23 +34,9 @@
 }
 
 .attachment-post-thumbnail {
-    width: 95%;
+    width: 100%;
     height: auto;
-    margin: 25px auto;
-    display: block;
-
-    @include media(">=tablet"){
-        width: 90%;
-        height: auto;
-        margin: 0 5% 25px 0;
-        display: block;
-        border: 1px #aaa solid;
-    }
-}
-
-.wp-caption {
-    margin: 10px 5%;
-    width:100%;
+    margin: 1em 0;
 }
 
 .size-medium {
@@ -79,9 +65,9 @@
 .entry-content {
 
     .wp-caption {
-        margin: 0 auto;
         display: block;
         margin: 2rem auto;
+        width:100% !important;
     }
 
     .wp-caption-text {
@@ -97,37 +83,28 @@
 
 img.aligncenter,
 .wp-caption.aligncenter {
-    text-align: none;
-    margin: 1rem auto;
+    margin: 1rem 0;
     display: block;
-
-    @include media(">=tablet"){
-        text-align: none;
-        margin: 0 auto;
-        display: block;
-    }
 }
 
 img.alignleft,
 .wp-caption.alignleft {
-    margin: 1em 1em 1em 0;
+    margin: 1em 0 1em 0;
     display: block;
 
     @include media(">=tablet"){
-        text-align: none;
+        margin: 1em 1em 1em 0;
         float: left;
-        display: block;
     }
 }
 
 img.alignright,
 .wp-caption.alignright {
-    margin: 1em 0 1em 1em;
+    margin: 1em 0 1em 0;
     display: block;
 
     @include media(">=desktop"){
-        text-align: none;
-        display: block;
+        margin: 1em 0 1em 1em;
         float: right;
     }
 }

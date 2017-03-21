@@ -23,10 +23,11 @@ h5 {
 
 h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 700;
-    a {
-        font-size: inherit;
+
+    @include media(">=tablet"){
+        font-size: 3em;
     }
 }
 
@@ -34,9 +35,6 @@ h2 {
     margin: 25px 0;
     font-size: 2em;
     font-weight: 700;
-    a {
-        font-family: "futura-pt", helvetica, san-serif;
-    }
 }
 
 h3 {
@@ -64,10 +62,10 @@ li,
     line-height: 1.6em;
     font-size: 1.2rem;
     color: $darkBkg;
+}
 
-    @include media("<desktop"){
-        line-height: 1.6em;
-    }
+li {
+    margin: 1em 0;    
 }
 
 input {
@@ -76,7 +74,7 @@ input {
 
 ol,
 ul {
-    margin: 0 0 0 25px;
+    margin: 0 0 0 1em;
 }
 
 ol {
@@ -100,10 +98,6 @@ a {
 
 img {
     width: 100%;
-}
-
-#wrapper {
-    margin-top: 40px;
 }
 
 blockquote {
