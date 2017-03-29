@@ -5,6 +5,12 @@
     margin: 10px 0;
 }
 
+#comments-list {
+    ul {
+        list-style-type: none;
+    }
+}
+
 .comment-body {
     margin-bottom: 20px;
     padding-bottom: 30px;
@@ -37,10 +43,10 @@
 }
 
 .comment-author {
-    margin: 20px 0;
 
     img {
 	    margin-right: 5px;
+        width: initial;
 	}
 }
 
