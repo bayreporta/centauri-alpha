@@ -32,7 +32,7 @@ function ca_populate_services_list( $data ){
 	$ret = '';
 	$size = sizeof($data);
 	for ( $i = 0 ; $i < $size ; $i++ ){
-		$ret .= '<div class="service-list-item">';
+		$ret .= '<div class="service-list-item" >';
 			$ret .= '<div role="image">';
 				$ret .= '<img src="' . $data[$i][ 'image' ][ 'sizes' ][ 'thumbnail' ] . '">';
 			$ret .= '</div>';
@@ -95,7 +95,7 @@ function ca_populate_services_details( $data ){
 	$ret = '';
 	$size = sizeof( $data );
 	for ( $i = 0 ; $i < $size ; $i++ ){
-		$ret .= '<div class="service-item">';
+		$ret .= '<div id="service-' . $i . '" class="service-item">';
 			$ret .= '<h2>' . $data[$i][ 'header' ] . '</h2>';
 			$ret .= '<div role="top">';
 				$ret .= '<div>';

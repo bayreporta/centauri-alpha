@@ -1,0 +1,181 @@
+/**
+* #.# 404 Template Styles
+*
+* Styles related to the GoT-like 404 page
+*/
+
+
+html, 
+body {
+	background: #000;
+}
+
+#winter-is-coming-404 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #000;
+
+	h1 {
+		color: #fff;
+		font-family: "futura-pt", helvetica, san-serif;
+		margin: 0;
+	}
+
+	p {
+		font-family: "brandon-grotesque", "futura-pt", helvetica, san-serif;
+	}
+}
+
+.snowflake {
+	position: absolute;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+#header-one-404 {
+	position: absolute;
+	left: 15%;
+	top: 20%;
+	@include simple-transform( null, null,  -15%, -20% );
+
+	h1 {
+		font-size: 12rem;
+	}	
+}
+
+#header-two-404 {
+	position: absolute;
+	left: 50%;
+	top: 65%;
+	@include simple-transform( null, null,  -50%, -65% );
+
+	h1 {
+		font-size: 5rem;
+		text-transform: uppercase;
+	}	
+}
+
+#escape-404 {
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	@include simple-transform( null, null,  -50%, -10% );
+	@include border-radius( 10px );
+	padding: .5em 1em;
+    background: #ff0000;
+    cursor: pointer;
+
+    &:hover {
+		background: #b20000;
+	}
+
+	p {
+		color: #fff;
+		text-transform: uppercase;
+		padding: 0;
+		margin: 0;
+	}
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+#ice-404 {
+	position: absolute;
+	top: 50%;
+	right: -5000px;
+	@include simple-transform( null, null, null, -50% );
+	width: 100%;
+
+	svg {
+		fill: #fff;
+	}
+}
+
+/* Sword incoming
+---------------------------*/
+.ice-cometh {
+	@include animation-name('ice-cometh');
+    @include animation-iteration-count(1);
+    @include animation-play-state(running);
+    @include animation-duration(1s);
+    @include animation-delay(1s);
+    @include animation-timing-function(linear);
+    @include animation-fill-mode(forwards);
+}
+
+@keyframes ice-cometh {
+	0% {
+		right: -5000px;
+	}
+	100% {
+		right: 0;
+	}
+}
+
+/* THE BLOOD!
+---------------------------*/
+.ice-cometh svg {
+	@include animation-name('ice-cometh-red');
+    @include animation-iteration-count(1);
+    @include animation-play-state(running);
+    @include animation-duration(.5s);
+    @include animation-delay(2s);
+    @include animation-timing-function(linear);
+    @include animation-fill-mode(forwards);
+}
+
+@keyframes ice-cometh-red {
+	0% {
+		fill: #fff;
+	}
+	100% {
+		fill: #ff0000;
+	}
+}
+
+/* fading in text
+---------------------------*/
+.fade-in-404 {
+	@include animation-name('fade-in-fourofour');
+    @include animation-iteration-count(1);
+    @include animation-play-state(running);
+    @include animation-duration(2s);
+    @include animation-timing-function(linear);
+}
+
+@keyframes fade-in-fourofour {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* fading in button
+---------------------------*/
+.fade-in-404-button {
+	@include animation-name('fade-in-fourofour-button');
+    @include animation-iteration-count(1);
+    @include animation-play-state(running);
+    @include animation-duration(1.5s);
+    @include animation-delay(1.5s);
+    @include animation-timing-function(linear);
+    @include animation-fill-mode(forwards);
+
+}
+
+@keyframes fade-in-fourofour-button {
+	0%, 70% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

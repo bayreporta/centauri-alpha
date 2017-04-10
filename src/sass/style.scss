@@ -18,7 +18,6 @@ $oldColor: #379bd3;
 $oldHoverColor: #22709c;
 $grayColor: #4e4e4e;
 $grayLiteColor: #c0c0c0;
-/*#007C8F*/
 
 /* Media variables and expression aliases
 ------------------------------------------------*/
@@ -42,4 +41,5 @@ $retina:">=desktop","retina2x";
 @import "images";
 @import "comments";
 @import "footer";
+@import "404";
 @import "animations";
