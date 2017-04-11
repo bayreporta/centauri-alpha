@@ -56,6 +56,10 @@ function ca_populate_services_list( $data ){
 /* #3: For testimonials, random or list of all marked
 ================================================================================*/
 function ca_determine_testimonial_output( $data, $random = null ){
+	if ( $data === false ) {
+		return;
+	}
+
 	if ( $random === true ){
 		$rand = rand( 0, sizeof( $data ) - 1);
 		$data = array( $data[ $rand ] );
