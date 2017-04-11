@@ -180,6 +180,7 @@
 
 		@include media( ">=desktop" ){
 			width: 45%;
+			height: 600px;
 			float: left;	
 			padding-bottom: 0;
 
@@ -233,6 +234,7 @@
 
 		img {
 			@include media( ">=desktop" ){
+				min-height: 170px;
 				max-height:210px;	
 			}
 		}
