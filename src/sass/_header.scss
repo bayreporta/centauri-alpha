@@ -14,11 +14,15 @@
 }
 
 #branding {
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: absolute;
     left:10px;
     top: 50%;
 	@include simple-transform(null, null, null, -50%);
+
+    #site-title {
+        text-transform: uppercase;
+    }
 
     a {
     	color:#fff;
@@ -79,7 +83,8 @@
     }
 
     a {
-        font-size: 1.1rem;
+        font-size: 1rem;                
+        text-transform: uppercase;
 
 		@include media($phone...){
 			color: #fff;
