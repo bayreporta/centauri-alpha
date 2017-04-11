@@ -109,9 +109,3 @@ function centalpha_localize_ajax_script($args){
 	));
 }
 add_action('wp_print_footer_scripts', 'centalpha_localize_ajax_script');
-
-/* #6: Code handles main image resizing based on device
----------------------------------------------------------------------------*/
-function centalpha_main_image_resize(){
-
-}

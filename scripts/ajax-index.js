@@ -29,8 +29,17 @@
 			success: function( html ) {
 				var parent = jQuery(' #content>div ');
 				parent.append( html );
-				parent.find( '.button-container' ).appendTo(parent);				
-				
+
+				//count how many articles incoming
+				var articles = (html.match(/(\/article)/g) || []).length;
+
+				//resolve button container loading and moving to bottom
+				if ( articles < 10 ){
+					parent.find( '.button-container' ).remove();
+				}	
+				else {
+					parent.find( '.button-container' ).appendTo(parent);
+				}			
 				jQuery(' .button-container i ').css( 'display' , 'none' );
 				loader.removeClass( 'loader-spin' );
 			}
