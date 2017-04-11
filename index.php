@@ -15,7 +15,13 @@
 			</h1>
 		</header>
 		<hr />
-		<?php $count; ?>
+		<?php 
+			//handling query and pagination
+			$count;
+			global $wp_query;
+			$args = $wp_query->query;
+			centalpha_localize_ajax_script( $args );
+		?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'templates/entry/entry' , 'index' ); ?>
 			<?php $count += 1; ?>
