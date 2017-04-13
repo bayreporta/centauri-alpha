@@ -41,8 +41,7 @@ function centalpha_nav_menus(){
 /* #3: Include core script files
 ---------------------------------------------------------------------------*/
 add_action( 'wp_enqueue_scripts', 'centalpha_load_scripts' );
-function centalpha_load_scripts()
-{
+function centalpha_load_scripts(){
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'tiny_mce' );
 	wp_enqueue_script( 'pym' , '/wp-content/themes/centauri-alpha/scripts/pym.v1.min.js' );
