@@ -9,7 +9,7 @@
 	<?php get_template_part( 'templates/entry/entry', 'service_list' ) ?>
 
 	<!-- Testimonials area -->
-	<?php get_template_part( 'templates/entry/entry', 'testimonials' ) ?>
+	<?php //get_template_part( 'templates/entry/entry', 'testimonials' ) ?>
 
 	<!-- Latest Blog area -->
 	<?php get_template_part( 'templates/entry/entry', 'latest_post' ) ?>

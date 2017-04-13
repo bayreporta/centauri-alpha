@@ -105,31 +105,32 @@
 .entry-segment[role="service-list"] {
 
 	.service-list-item {
-		height: 160px;
-		margin-bottom: 1em;
-		padding-bottom: 25em;
+		margin-bottom: 3em;
 		position: relative;
 
 		@include media( ">=tablet" ){
+			float:left;
 			width: 48%;
+			min-height: 550px;
 		}
 
 		@include media( ">=desktop" ){
+			float: none;
 			padding-bottom: 0;
 			width: 100%;	
+			min-height: 160px;
+		}
+
+		img {
+			width: initial;
 		}
 	}
 
 	div[role="image"] {
-		width: 50%;
+		width: 150px;
     	margin: 0 auto;
 
-	   	@include media( ">=tablet" ){
-			width: 70%;
-		}
-
 		@include media( ">=desktop" ){
-			width: 20%;
 			float:left;
 		}
 	}
@@ -144,18 +145,13 @@
 	}
 
 	.button-container {
-		position: absolute;
-		left: 50%;
-		@include simple-transform(null, null, -50%);
+		max-width: 110px;
 
 		@include media(">=tablet", "<=desktop"){
-			min-width: 133px;
+			
 		}
 
 		@include media(">=desktop"){
-			position: relative;
-			left: 0;
-			@include simple-transform(null, null, 0);
 			float: right;    
 			margin: 40px auto;
 		}		
