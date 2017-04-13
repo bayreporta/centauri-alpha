@@ -10,6 +10,9 @@
 
 	<!-- Testimonials area -->
 	<?php get_template_part( 'templates/entry/entry', 'testimonials' ) ?>
+
+	<!-- Latest Blog area -->
+	<?php get_template_part( 'templates/entry/entry', 'latest_post' ) ?>
 	
 	<!-- Clips area -->
 	<?php get_template_part( 'templates/entry/entry', 'clips' ) ?>

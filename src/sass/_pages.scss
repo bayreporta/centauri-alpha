@@ -30,6 +30,13 @@
 	overflow: hidden;
 }
 
+/* Latest post Segment
+--------------------------------*/
+.entry-segment[role="latest-post"] {
+	.button-container {
+		max-width: 120px;
+	}
+}
 
 /* Featured Image Segment
 --------------------------------*/
