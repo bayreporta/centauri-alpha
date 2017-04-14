@@ -17,7 +17,7 @@
 	</section>
 
 	<!-- types of work area -->
-	<?php get_template_part( 'templates/entry/entry', 'about_work' ) ?>
+	<?php //get_template_part( 'templates/entry/entry', 'about_work' ) ?>
 	
 	<!-- Skills area -->
 	<?php //get_template_part( 'templates/entry/entry', 'about_skills' ) ?>
