@@ -11,13 +11,16 @@
 	<!-- Pieces of history area -->
 	<section class="entry-segment" role="about">
 		<?php print centalpha_populate_about_details( get_field('ca_about_deets') ); ?>
+		<div class="button-container">
+			<a href="<?php echo get_site_url(); ?>/resume/"><div class="button button-center">View Resume</div></a>
+		</div>	
 	</section>
 
 	<!-- types of work area -->
 	<?php get_template_part( 'templates/entry/entry', 'about_work' ) ?>
 	
 	<!-- Skills area -->
-	<?php get_template_part( 'templates/entry/entry', 'about_skills' ) ?>
+	<?php //get_template_part( 'templates/entry/entry', 'about_skills' ) ?>
 
 	<!-- Contact area -->
 	<?php get_template_part( 'templates/entry/entry', 'contact' ) ?>

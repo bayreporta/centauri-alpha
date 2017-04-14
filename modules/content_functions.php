@@ -150,3 +150,19 @@ function centalpha_populate_about_details($data){
 	unset( $data );
 	return $ret;
 }
+
+/* #7: Populate awards on resume page
+================================================================================*/
+function centalpha_populate_awards($data){
+	$ret = '';
+	$size = sizeof( $data );
+	$ret .= '<ul>';
+	for ( $i = 0 ; $i < $size ; $i++ ){
+		$ret .= '<a href="' . $data[$i][ 'link' ] . '">';
+			$ret .= '<li>' . $data[$i][ 'item' ] . '</li>';
+		$ret .= '</a>';	
+	}
+	$ret .= '</ul>';
+	unset( $data );
+	return $ret;
+}

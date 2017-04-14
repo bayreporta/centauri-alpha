@@ -77,7 +77,7 @@
 	}
 
 	&>div[role="image"] {
-		opacity: 0.7;
+		opacity: 0.6;
 	}
 
 	h1 {
@@ -145,12 +145,7 @@
 	}
 
 	.button-container {
-		max-width: 110px;
-
-		@include media(">=tablet", "<=desktop"){
-			
-		}
-
+		
 		@include media(">=desktop"){
 			float: right;    
 			margin: 40px auto;
@@ -478,6 +473,42 @@
 		li,
 		span {
 			font-size: 1.1rem;
+		}
+	}
+}
+
+/* Resume Segment
+--------------------------------*/
+.entry-segment[role="resume"] {
+
+	div[role="item"] {
+		margin-bottom: 2em;
+	}
+
+	h3 {
+		margin: .5em 0 0 0;
+	}
+
+	h4 {
+		margin: 0;
+		color: $grayLiteColor;
+		text-transform: uppercase;
+   		font-size: 1rem;
+   		font-weight: 700;
+	}
+
+	li {
+
+		&:hover {
+			color: $oldHoverColor;
+		}
+
+	}
+
+	a {
+		&:hover {
+			color: $oldHoverColor;
+			text-decoration: none;
 		}
 	}
 }
