@@ -108,3 +108,10 @@ function centalpha_localize_ajax_script($args){
 	));
 }
 add_action('wp_print_footer_scripts', 'centalpha_localize_ajax_script');
+
+/* #6: Simple Random Functions
+---------------------------------------------------------------------------*/
+function centalpha_random_number( $floor, $ceil ){
+	$rand = rand( $floor, $ceil);
+	return $rand;
+}

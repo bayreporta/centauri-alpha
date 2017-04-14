@@ -65,7 +65,7 @@ function ca_determine_testimonial_output( $data, $random = null ){
 	}
 
 	if ( $random === true ){
-		$rand = rand( 0, sizeof( $data ) - 1);
+		$rand = centalpha_random_number( 0, sizeof( $data ) - 1 );
 		$data = array( $data[ $rand ] );
 	} 
 	$ret = ca_populate_testimonials( $data );
@@ -168,5 +168,21 @@ function centalpha_populate_awards($data){
 	}
 	$ret .= '</ul>';
 	unset( $data );
+	return $ret;
+}
+
+/* #8: Populate contact boxage
+================================================================================*/
+function centalpha_populate_contact_box( $img, $quote ){
+	$ret = '';
+	
+	//random image
+	$rand = centalpha_random_number( 0, sizeof( $img ) - 1 );
+	$ret .= '<img src="' . $img[$rand]['image'] . '">';
+
+	//random quote
+	$rand = centalpha_random_number( 0, sizeof( $quote ) - 1 );
+	$ret .= '<h3>' . $quote[$rand]['quote'] . '</h3>';
+
 	return $ret;
 }

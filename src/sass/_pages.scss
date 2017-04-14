@@ -42,7 +42,6 @@
 --------------------------------*/
 .main-image {
 	position: relative;
-	background: rgba(0,0,0,1);
 
 	&>div[role="main-head"] {
 		position: absolute;
@@ -77,7 +76,12 @@
 	}
 
 	&>div[role="image"] {
-		opacity: 0.6;
+		background: #000;
+
+		img {
+			opacity: 0.6;
+			display: block;
+		}
 	}
 
 	h1 {
@@ -356,9 +360,9 @@
 --------------------------------*/
 .entry-segment[role="contact"] {
 
-	&>div:first-of-type {
-		min-height: 540px;
-    	background: #aaa;
+	div[role="box"] {
+		position: relative;
+    	background: #000;
     	margin-bottom: 2em;
 
 		@include media( ">=desktop" ){
@@ -366,9 +370,25 @@
 			float: left;
     		margin-bottom: 0;
 		}
+
+		img {
+			display: block;
+			opacity: 0.5;
+		}
+
+		h3 {
+			position: absolute;
+		    top: 30%;
+		    left: 5%;
+		    @include simple-transform( null, null, 0%, -30% );
+		    width: 90%;
+		    color: #fff;
+		    font-size: 3rem !important;
+		    text-transform: none !important;
+		}
 	}
 
-	&>div:last-of-type {
+	&>div[role="form"] {
 		@include media( ">=desktop" ){
 			width: 45%;
 			float: right;    
