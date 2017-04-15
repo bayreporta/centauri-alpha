@@ -42,6 +42,8 @@
 --------------------------------*/
 .main-image {
 	position: relative;
+	background: #000;
+
 
 	&>div[role="main-head"] {
 		position: absolute;
@@ -82,10 +84,8 @@
 	}
 
 	&>div[role="image"] {
-		background: #000;
-
 		img {
-			opacity: 0.6;
+			opacity: 0.4;
 			display: block;
 		}
 	}
@@ -141,7 +141,7 @@
 	div[role="content"] {
 
 	   	@include media( ">=desktop" ){
-			width: 60%;
+			width: 55%;
 			float: left;    
 			margin-left: 2%;
 		}
@@ -377,7 +377,7 @@
 
 		img {
 			display: block;
-			opacity: 0.5;
+			opacity: 0.4;
 		}
 
 		h3 {
