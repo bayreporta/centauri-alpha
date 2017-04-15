@@ -121,11 +121,11 @@
 
 		@include media( ">=desktop" ){
 			padding-bottom: 0;
-			min-height: 160px;
+			min-height: 200px;
 		}
 
 		img {
-			width: initial;
+			width: 150px;
 		}
 	}
 
@@ -153,10 +153,10 @@
 		@include simple-transform( null, null, -50% );
 
 		@include media(">=desktop"){
-			position: relative;
-			left: initial;
-			float: right;    
-			margin: 40px auto;
+		    right: 0;
+		    left: initial;
+			@include simple-transform( null, null, 0% );
+		    margin: 40px auto;
 		}		
 	}
 
