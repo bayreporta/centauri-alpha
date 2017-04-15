@@ -1,13 +1,13 @@
 <?php /* Template Name: Index */ get_header(); ?>
-
-<!-- Featured image area -->
-<?php //get_template_part( 'templates/entry/entry', 'main_image' ) ?>
-
 <main id="content" role="home">
 
 	<!-- Header area -->
-	<?php //get_template_part( 'templates/entry/entry', 'service_list' ) ?>
-
+	<header>
+		<h1><?php print get_field( 'ca_index_header' ); ?></h1>	
+		<hr>
+		<?php print get_field( 'ca_index_header_content' ); ?>
+	</header>
+	
 	<!-- Primary Index area -->
 	<?php //get_template_part( 'templates/entry/entry', 'primary_index' ) ?>
 
@@ -16,6 +16,8 @@
 
 	<!-- Secondary Index area -->
 	<div class="entry-segment" role="sec-index">
+		<h2 class="aligncenter">All Posts</h2>
+		<hr class="fancy-line">
 		<?php 
 			$cat_id = get_field( 'ca_index_query_category' );
 			$args = array(
