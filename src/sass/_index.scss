@@ -1,10 +1,12 @@
 /* INDEX AND ARCHIVE STYLES
 ====================================*/
 
-#content[role="index"] {
+#content[role="index"],
+.entry-segment[role="sec-index"] {
 
     .button-container {
         margin: 3em auto;
+        max-width: initial;
 
         i {
             display: none;
