@@ -2,22 +2,33 @@
 
 /* #1: Populate featured clips style
 ================================================================================*/
-function ca_populate_clips( $data ){
+function centalpha_populate_clips( $data, $id=null ){
 	$ret = '';
 
-	$size = sizeof($data);
+	//array of current or singular
+	$id === null ? $current = get_field( 'ca_current_featured_clips' ) : $current = array(array( 'id' => $id ));
+	$size = sizeof($current);
+
 	for ( $i = 0 ; $i < $size ; $i++ ){
+		//grab only the relavant items
+		foreach ($data as $key => $val) {
+			if ( $val['id'] === $current[$i]['id'] ){
+				$item = $val;
+				break;
+			}
+		}
+
 		$ret .= '<div class="clip">';
 			$ret .= '<div role="image">';
-				$ret .= '<img src="' . $data[$i][ 'image' ][ 'sizes' ][ 'large' ] . '">';
+				$ret .= '<img src="' . $item[ 'image' ][ 'sizes' ][ 'large' ] . '">';
 			$ret .= '</div>';
 			$ret .= '<div role="content">';
-				$ret .= '<h3>' . $data[$i][ 'headline' ] . '</h3>';
-				$ret .= '<h4>' . $data[$i][ 'subhead' ] . '</h4>';
+				$ret .= '<h3>' . $item[ 'headline' ] . '</h3>';
+				$ret .= '<h4>' . $item[ 'subhead' ] . '</h4>';
 				$ret .= '<hr />';
-				$ret .= $data[$i][ 'content' ];
+				$ret .= $item[ 'content' ];
 				$ret .= '<div class="button-container">';
-					$ret .= '<a href="' . $data[$i][ 'link' ] . '"><div class="button">Explore</div></a>';
+					$ret .= '<a href="' . $item[ 'link' ] . '"><div class="button">Explore</div></a>';
 				$ret .= '</div>';
 			$ret .= '</div>';		
 		$ret .= '</div>';
@@ -111,20 +122,7 @@ function ca_populate_services_details( $data ){
 				$ret .= '</div>';				
 			$ret .= '</div>';
 			$ret .= '<div role="bottom">';	
-				$ret .= '<div class="clip">';
-					$ret .= '<div role="image">';
-						$ret .= '<img src="' . $data[$i][ 'fp_image' ][ 'sizes' ][ 'large' ] . '">';
-					$ret .= '</div>';
-					$ret .= '<div role="content">';
-						$ret .= '<h3>' . $data[$i][ 'fp_header' ] . '</h3>';
-						$ret .= '<h4>' . $data[$i][ 'fp_subhed' ] . '</h4>';
-						$ret .= '<hr />';
-						$ret .= $data[$i]['fp_content'];
-						$ret .= '<div class="button-container">';
-							$ret .= '<a href="' . $data[$i][ 'fp_link' ] . '"><div class="button">Explore</div></a>';
-						$ret .= '</div>';
-					$ret .= '</div>';		
-				$ret .= '</div>';			
+				$ret .= centalpha_populate_clips( get_field( 'ca_featured_clips', 4433 ),  $data[$i][ 'featured_id' ] );
 				$ret .= '<div>';
 					$ret .= '<h3 class="aligncenter">what I can do for you</h3>';
 					$ret .= '<ul>';

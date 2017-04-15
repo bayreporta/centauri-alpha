@@ -9,10 +9,10 @@
 	</header>
 	
 	<!-- Primary Index area -->
-	<?php //get_template_part( 'templates/entry/entry', 'primary_index' ) ?>
+	<?php get_template_part( 'templates/entry/entry', 'primary_index' ) ?>
 
 	<!-- Featured Clips area -->
-	<?php //get_template_part( 'templates/entry/entry', 'clips' ) ?>
+	<?php get_template_part( 'templates/entry/entry', 'clips' ) ?>
 
 	<!-- Secondary Index area -->
 	<div class="entry-segment" role="sec-index">
