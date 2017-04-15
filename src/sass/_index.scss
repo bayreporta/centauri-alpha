@@ -59,3 +59,76 @@
         position: absolute;
     }
 }
+
+/* PAGE INDEXES - AROUND WORK
+====================================*/
+.entry-segment[role="prim-index"]{
+    .prim-clip {
+        position: relative;
+        height: 351px;
+
+        @include media( ">=desktop" ){
+            
+        }
+
+        .button-container {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            @include simple-transform( null, null, null, -50% );
+        }
+
+        div[role="image"]{
+            position: absolute;
+            width: 70%;
+            height: 351px;
+
+            img {
+                height: 100%;
+                width: initial;
+
+                @include media( ">=desktop" ){
+                        
+                }
+            }
+
+        }
+
+        div[role="content"] {
+            position: absolute;
+            width: 50%;
+            background: #fff;
+            right: 15%;
+            padding: 1em 1em 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include media( ">=desktop" ){
+               
+            }
+        }       
+
+        p {
+            font-size: 1.1rem;
+        }   
+
+        h3 {
+            margin: 0;
+            text-align: center;         
+        }   
+
+        h4 {
+            margin: 10px 0;
+            font-style: italic;
+            color: #aaa;
+            text-align: center;
+        }
+
+        hr {
+            border-bottom: #aaa 1px solid;
+            width: 30%;
+                margin: 1em auto;
+        }
+
+    }
+}

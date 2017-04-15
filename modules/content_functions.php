@@ -24,7 +24,7 @@ function centalpha_populate_clips( $data, $id=null ){
 			$ret .= '</div>';
 			$ret .= '<div role="content">';
 				$ret .= '<h3>' . $item[ 'headline' ] . '</h3>';
-				$ret .= '<h4>' . $item[ 'subhead' ] . '</h4>';
+				$ret .= '<h4>' . $item[ 'subhed' ] . '</h4>';
 				$ret .= '<hr />';
 				$ret .= $item[ 'content' ];
 				$ret .= '<div class="button-container">';

@@ -15,6 +15,10 @@
 	<?php get_template_part( 'templates/entry/entry', 'latest_post' ) ?>
 	
 	<!-- Clips area -->
+	<h2 class="aligncenter">
+		<?php print get_field( 'ca_clip_header' ); ?>
+	</h2>
+	<hr class="fancy-line" />	
 	<?php get_template_part( 'templates/entry/entry', 'clips' ) ?>
 
 	<!-- Bio area -->
