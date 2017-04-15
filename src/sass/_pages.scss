@@ -34,7 +34,7 @@
 --------------------------------*/
 .entry-segment[role="latest-post"] {
 	.button-container {
-		max-width: 120px;
+		max-width: 107px;
 	}
 }
 
@@ -46,9 +46,14 @@
 	&>div[role="main-head"] {
 		position: absolute;
 		left: 50%;
-		top: 40%;
-		@include simple-transform( null, null, -50%, -40% );
-		width: 100%;
+		top: 10%;
+		@include simple-transform( null, null, -50%, -10% );
+		width: 95%;
+
+		@include media( ">=tablet" ){
+			top: 30%;
+			@include simple-transform( null, null, -50%, -30% );
+		}
 
 		@include media( ">=desktop" ){
 			top: 45%;
@@ -60,12 +65,13 @@
 	&>div[role="second-head"] {
 		position: absolute;
 		left: 50%;
-		top: 75%;
-		@include simple-transform( null, null, -50%, -75% );
-		width: 100%;
+		bottom: -10%;
+		@include simple-transform( null, null, -50% );
+		width: 95%;
 
 		@include media( ">=tablet" ){
 			top: 65%;
+			bottom: initial;
 			@include simple-transform( null, null, -50%, -65% );
 		}
 
@@ -110,18 +116,11 @@
 
 	.service-list-item {
 		margin-bottom: 3em;
+		padding-bottom: 4em;
 		position: relative;
 
-		@include media( ">=tablet" ){
-			float:left;
-			width: 48%;
-			min-height: 550px;
-		}
-
 		@include media( ">=desktop" ){
-			float: none;
 			padding-bottom: 0;
-			width: 100%;	
 			min-height: 160px;
 		}
 
@@ -149,8 +148,13 @@
 	}
 
 	.button-container {
-		
+		position: absolute;
+		left: 50%;
+		@include simple-transform( null, null, -50% );
+
 		@include media(">=desktop"){
+			position: relative;
+			left: initial;
 			float: right;    
 			margin: 40px auto;
 		}		
