@@ -65,46 +65,60 @@
 .entry-segment[role="prim-index"]{
     .prim-clip {
         position: relative;
-        height: 351px;
+        height: 650px;
 
         @include media( ">=desktop" ){
-            
+            height: 351px;     
         }
 
         .button-container {
             position: absolute;
-            top: 50%;
-            right: 0;
-            @include simple-transform( null, null, null, -50% );
+            top: 100%;
+            left: 50%;
+            @include simple-transform( null, null, -50%, -100% );
+
+            @include media( ">=desktop" ){
+                right: 0;
+                left: initial;
+                top: 50%;
+                @include simple-transform( null, null, null, -50% );
+            }
+
         }
 
         div[role="image"]{
-            position: absolute;
-            width: 70%;
-            height: 351px;
+            width: 100%;
+
+            @include media( ">=desktop" ){
+                position: absolute;
+                width: 70%;
+                height: 351px;
+            }
 
             img {
-                height: 100%;
-                width: initial;
+                width: 100%;
 
                 @include media( ">=desktop" ){
-                        
+                    height: 100%;
                 }
             }
 
         }
 
         div[role="content"] {
-            position: absolute;
-            width: 50%;
-            background: #fff;
-            right: 15%;
-            padding: 1em 1em 0;
-            top: 50%;
-            transform: translateY(-50%);
+            position: relative;
+            top: -20px;            
+            width: 80%;
+            padding: 20px 10px 0 10px;            
+            margin: 0 auto;
+            background-color: #fff;
 
             @include media( ">=desktop" ){
-               
+                position: absolute;
+                right: 15%;
+                top: 50%;
+                @include simple-transform( null, null, null, -50% );   
+                width: 50%;                           
             }
         }       
 
