@@ -15,6 +15,9 @@
 		<?php endwhile; endif; ?>
 	</section>
 
+	<!-- key area -->
+	<?php get_template_part( 'templates/directory/directory', 'key' ) ?>
+
 	<!-- Table area -->
 	<?php get_template_part( 'templates/directory/directory', 'table' ) ?>
 
