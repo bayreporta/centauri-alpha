@@ -1,0 +1,106 @@
+/**
+* #.# Directory Styles
+*
+* For the serious games directory
+*/
+
+#content[role="directory"] {
+    @include media(">=tablet") {
+        width: 80%;
+        max-width: initial;
+    }
+}
+
+.directory-segment {
+    @include media(">=tablet") {
+        width: 75%;
+        margin: 0 auto;
+        max-width: 650px;
+    }
+}
+
+.directory-segment[role="update"]{
+    margin-bottom: 2em;
+
+    h2 {
+        margin-bottom: 0;
+        font-size: 5rem;
+        color: $oldColor;
+    }
+
+    h3 {
+        margin-top: 0;
+        color: $oldColor;
+    }
+}
+
+.directory-segment[role="table"]{
+    width: 100%;
+    max-width: 1000px;
+
+    table {
+        display: table;
+        width: 100%;
+
+        thead {
+            border-bottom: 2px solid #000;
+        }
+
+        th {
+            width: 33%;
+            padding: .5em 0;
+            text-transform: lowercase;
+    
+            &[role="icons"],
+            &[role="year"] {
+                display: none;
+            }
+
+            @include media(">=desktop") {
+                width: 28.3333333333%;
+
+                &[role="icons"] {
+                    display: table-cell;
+                    width:15%;
+                }
+            }
+
+            @include media(">=1280px") {
+                width: 25%;
+
+                &[role="icons"] {
+                    display: table-cell;
+                }
+            }
+            
+        }
+
+        td {
+            padding: .5em 0;
+            font-size: .9rem;
+    
+            &[role="icons"],
+            &[role="year"] {
+                display: none;
+            }
+
+            @include media(">=desktop") {
+                &[role="icons"] {
+                    display: table-cell;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+               border-bottom: 1px solid $grayLiteColor;
+            }
+
+            img {
+                width: 25px;
+                padding-right: 5px;
+            }
+        }
+    }
+}
+

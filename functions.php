@@ -115,3 +115,44 @@ function centalpha_random_number( $floor, $ceil ){
 	$rand = rand( $floor, $ceil);
 	return $rand;
 }
+
+/* #7: Determine time between two dates
+===============================================================*/
+function centalpha_determine_time_difference($target){
+    $current = time();
+
+    $target = date_create_from_format( 'U', $target );
+
+    $current = date_create_from_format( 'U', $current );
+    $current->setTimeZone( new DateTimeZone( 'America/Los_Angeles' ) );
+
+    $difference = date_diff( $current, $target );
+
+    return $difference;
+}
+
+function centalpha_populate_time_difference($d){
+    $ret = [];
+
+    // find the first time value and return that
+    if ( $d->y !== 0 ) {
+        $ret[] = $d->y;
+        $ret < 2 ? $ret[] = ' year' : $ret[] = ' years';
+    } elseif ( $d->m !== 0 ) {
+        $ret[] = $d->m;
+        $ret < 2 ? $ret[] = ' month' : $ret[] = ' months';
+    } elseif ( $d->d !== 0 ) {
+        $ret[] = $d->d;
+        $ret < 2 ? $ret[] = ' day' : $ret[] = ' days';
+    } elseif ( $d->h !== 0 ) {
+        $ret[] = $d->h;
+        $ret < 2 ? $ret[] = ' hour' : $ret[] = ' hours';
+    } elseif ( $d->i !== 0 ) {
+        $ret[] = $d->i;
+        $ret < 2 ? $ret[] = ' minute' : $ret[] = ' minutes';
+    } elseif ( $d->s !== 0 ) {
+        $ret[] = $d->s;
+        $ret < 2 ? $ret[] = ' second' : $ret[] = ' seconds';
+    }
+    return $ret;
+}
