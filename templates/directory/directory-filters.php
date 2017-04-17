@@ -1,9 +1,39 @@
-<section class="entry-segment" role="skills">
-	<h2 class="aligncenter">
-		<?php print get_field( 'ca_about_skills_header' ); ?>
-	</h2>
-	<hr class="fancy-line" />
-	<div role="flex">
-		<?php print centalpha_populate_about_details( get_field('ca_about_skill_list') ); ?>
+<section class="directory-segment" role="filters">
+	<div class="directory-filter">
+		<h5>Genre</h5>
+		<select>
+			<option value="">All</option>
+			<option value="action">Action</option>
+			<option value="arcade">Arcade</option>
+			<option value="budget">Budget</option>
+			<option value="cyoa">Choose Your Own Adventure</option>
+			<option value="other">Other</option>
+			<option value="puzzle">Puzzle</option>
+			<option value="quiz">Quiz</option>
+			<option value="simulation">Simulation</option>
+			<option value="strategy">Strategy</option>
+			<option value="vr">Virtual Reality</option>
+		</select>
+	</div>
+	<div class="directory-filter">
+		<h5>Status</h5>
+		<select>
+			<option value="">All</option>
+			<option value="live">Live</option>
+			<option value="buy">Purchasable</option>
+			<option value="dead">Dead</option>
+		</select>
+	</div>
+	<div class="directory-filter">
+		<h5>Media</h5>
+		<select>
+			<option value="">All</option>
+			<option value="true">Yes</option>
+			<option value="false">No</option>
+		</select>
+	</div>
+	<div class="directory-filter">
+		<h5>Year</h5>
+		<?php print centalpha_populate_directory_filter_years(); ?>
 	</div>
 </section>

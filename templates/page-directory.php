@@ -18,6 +18,9 @@
 	<!-- key area -->
 	<?php get_template_part( 'templates/directory/directory', 'key' ) ?>
 
+	<!-- Filters area -->
+	<?php get_template_part( 'templates/directory/directory', 'filters' ) ?>
+
 	<!-- Table area -->
 	<?php get_template_part( 'templates/directory/directory', 'table' ) ?>
 

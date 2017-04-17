@@ -48,7 +48,6 @@
 .directory-segment[role="key"]{
     overflow: hidden;
     padding-bottom: 1em;
-    border-bottom: 1px solid $grayLiteColor;
 
     div[role="genres"]{
         @include media(">=tablet") {
@@ -74,6 +73,22 @@
         span {
             font-size: 1rem;
         }
+    }
+}
+
+.directory-segment[role="filters"]{
+    overflow: hidden;
+
+    .directory-filter {
+        padding: 1em 0;
+        margin-right: 10px;
+        float: left;
+
+    }
+
+    h5 {
+        text-transform: lowercase;
+        font-weight: 700;
     }
 }
 

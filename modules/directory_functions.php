@@ -21,6 +21,7 @@ function centalpha_latest_game_directory_post(){
 	$ret .= '<h3 class="aligncenter">';
 		$ret .= $d[1] . ' since last update';
 	$ret .= '</h3>';
+	wp_reset_postdata();
 	return $ret;
 
 }
@@ -120,5 +121,30 @@ function centalpha_populate_directory_table(){
 			$ret .= '</td>';
 		$ret .= '</tr>';
 	}
+	return $ret;
+}
+
+/* #4: Populate directory years filter
+================================================================================*/
+function centalpha_populate_directory_filter_years(){
+	$ret = '';
+	global $wpdb;
+	$years = $wpdb->get_col( $wpdb->prepare(
+		"
+		SELECT DISTINCT meta_value
+		FROM $wpdb->postmeta
+		WHERE meta_key = %s
+		ORDER BY meta_value DESC
+		",
+		'ca_gd_year'
+	));
+
+	$size = sizeof($years);
+	$ret .= '<select>';
+	$ret .= '<option value="">All</option>';
+	for ( $i=0 ;  $i < $size ;  $i++ ) { 
+		$ret .= '<option value="' . $years[$i] . '">' . $years[$i] . '</option>';
+	}
+	$ret .= '<select>';
 	return $ret;
 }
