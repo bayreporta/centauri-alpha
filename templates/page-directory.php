@@ -30,4 +30,7 @@
 <!-- main image script -->
 <?php get_template_part( 'templates/scripts/script', 'main_image' ); ?>
 
+<!-- directory functionality script -->
+<?php get_template_part( 'templates/scripts/script', 'directory' ); ?>
+
 <?php get_footer(); ?>

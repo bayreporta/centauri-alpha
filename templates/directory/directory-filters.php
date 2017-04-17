@@ -1,7 +1,7 @@
 <section class="directory-segment" role="filters">
 	<div class="directory-filter">
 		<h5>Genre</h5>
-		<select>
+		<select role="genre">
 			<option value="">All</option>
 			<option value="action">Action</option>
 			<option value="arcade">Arcade</option>
@@ -17,7 +17,7 @@
 	</div>
 	<div class="directory-filter">
 		<h5>Status</h5>
-		<select>
+		<select role="status">
 			<option value="">All</option>
 			<option value="live">Live</option>
 			<option value="buy">Purchasable</option>
@@ -26,7 +26,7 @@
 	</div>
 	<div class="directory-filter">
 		<h5>Media</h5>
-		<select>
+		<select role="news">
 			<option value="">All</option>
 			<option value="true">Yes</option>
 			<option value="false">No</option>

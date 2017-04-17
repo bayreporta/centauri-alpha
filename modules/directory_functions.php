@@ -140,7 +140,7 @@ function centalpha_populate_directory_filter_years(){
 	));
 
 	$size = sizeof($years);
-	$ret .= '<select>';
+	$ret .= '<select role="year">';
 	$ret .= '<option value="">All</option>';
 	for ( $i=0 ;  $i < $size ;  $i++ ) { 
 		$ret .= '<option value="' . $years[$i] . '">' . $years[$i] . '</option>';
