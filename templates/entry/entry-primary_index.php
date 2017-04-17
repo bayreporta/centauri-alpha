@@ -1,19 +1,23 @@
 <section class="entry-segment" role="prim-index">
 	<h2 class="aligncenter">Featured Work</h2>
 	<hr class="fancy-line">
+	<?php 
+		$clips = get_field( 'ca_featured_clips', 4433 ); 
+		$prim_clip = get_field ( 'ca_primary_index_clips' );
+		$id = (int)$prim_clip[0]['id'];		
+	?>
 	<div class="prim-clip">
 		<div role="image">
-			<img src="http://localhost/wp-content/uploads/2016/10/Screen-Shot-2016-10-07-at-2.00.46-PM-1024x623.png">
+			<?php print '<img src="' . $clips[$id]['image']['url'] . '">'; ?>
 		</div>
 		<div role="content">
-			<h3>This is a title</h3>
-			<h4>asasasas, asasasasas, asasasas</h4>
+			<?php print '<h3>' . $clips[$id]['headline'] . '</h3>'; ?>
+			<?php print '<h4>' . $clips[$id]['subhed'] . '</h4>'; ?>			
 			<hr>
-			<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+			<?php print $clips[$id]['content'] ?>
 		</div>
 		<div class="button-container">
-			<a href="#"><div class="button">load more</div></a>
+			<?php print '<a href="' . $clips[$id]['link'] . '"><div class="button">load more</div></a>' ?>			
 		</div>
 	</div>
-	<?php //print centalpha_populate_primary_index( get_field() ); ?>
 </section>
