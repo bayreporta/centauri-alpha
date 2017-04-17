@@ -12,6 +12,7 @@ function centalpha_latest_game_directory_post(){
 		break;
 	endwhile;
 
+	$d = $d + 25200;
 	$d = centalpha_determine_time_difference( $d );
 	$d = centalpha_populate_time_difference( $d );
 
@@ -111,7 +112,7 @@ function centalpha_populate_directory_table(){
 				$ret .= $year;
 			$ret .= '</td>';
 			$ret .= '<td role="name">';
-				$ret .= $post->post_title;
+				$ret .= '<a href="' . $url . '" target="_blank">' . $post->post_title . '</a>';
 			$ret .= '</td>';
 			$ret .= '<td role="publish">';
 				$ret .= $publish;
