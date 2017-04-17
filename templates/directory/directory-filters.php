@@ -24,14 +24,14 @@
 			<option value="dead">Dead</option>
 		</select>
 	</div>
-	<div class="directory-filter">
+	<!--<div class="directory-filter">
 		<h5>Media</h5>
 		<select role="news">
 			<option value="">All</option>
 			<option value="true">Yes</option>
 			<option value="false">No</option>
 		</select>
-	</div>
+	</div>-->
 	<div class="directory-filter">
 		<h5>Year</h5>
 		<?php print centalpha_populate_directory_filter_years(); ?>
