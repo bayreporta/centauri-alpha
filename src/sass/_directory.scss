@@ -48,9 +48,14 @@
 .directory-segment[role="key"]{
     overflow: hidden;
     padding-bottom: 1em;
+    display: none;
+
+    @include media(">=desktop") {
+        display: block;
+    }
 
     div[role="genres"]{
-        @include media(">=tablet") {
+        @include media(">=desktop") {
             float: left;
             width: 75%;
             column-count: 3;
@@ -58,7 +63,7 @@
     }
 
     div[role="icons"]{
-        @include media(">=tablet") {
+        @include media(">=desktop") {
             float: right;
             width: 25%;
         }
@@ -96,6 +101,18 @@
     table {
         display: table;
         width: 100%;
+       
+        thead tr th.header {
+            background-image: url(bg.gif);
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+        thead tr th.headerSortUp {
+            background-image: url(asc.gif);
+        }
+        thead tr th.headerSortDown {
+            background-image: url(desc.gif);
+        }
 
         thead {
             border-top: 2px solid #000;
@@ -106,7 +123,8 @@
             width: 33%;
             padding: .5em 0;
             text-transform: uppercase;
-    
+            cursor: pointer;
+
             &[role="icons"],
             &[role="year"] {
                 display: none;

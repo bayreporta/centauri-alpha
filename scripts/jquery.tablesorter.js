@@ -569,7 +569,6 @@
                 for (var i = 0; i < l; i++) {
                     var s = sortList[i],
                         o = c.headerList[s[0]];
-                    console.log(sortList)
                     o.count = s[1];
                     o.count++;
                 }
