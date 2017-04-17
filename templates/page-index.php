@@ -23,8 +23,7 @@
 			$args = array(
 					'post_type'     => array( 'post' ),
 					'post_status'   => array( 'publish'),
-					//'cat'			=> $cat_id,
-					'category_name' => 'bloggin',
+					'cat' 			=> $cat_id,
 					'cache_results' => true
 		);
 		$query = new WP_Query( $args );

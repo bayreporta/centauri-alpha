@@ -34,16 +34,8 @@ function centalpha_game_directory_query( $count=null ){
 			'post_type'     => array( 'game_directory' ),
 			'post_status'   => array( 'publish'),
 			'cache_results' => true,
+			'posts_per_page' => -1
 	);
-
-	//posts to grab
-	if ( $count !== null ){
-		$add = array( 'posts_per_page' => $count );
-		array_push( $args, $add );
-	} else {
-		$add = array( 'nopaging' => true );
-		array_push( $args, $add );
-	}
 
 	$query = new WP_Query( $args );
 	return $query;
@@ -57,6 +49,7 @@ function centalpha_populate_directory_table(){
 	$direct = get_template_directory_uri() . '/assets/art/';
 
 	$size = sizeof( $q->posts );
+
 	foreach ( $q->posts as $post ) {
 		//acf fields and content
 		$year = get_field( 'ca_gd_year', $post->ID );

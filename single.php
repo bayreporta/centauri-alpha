@@ -1,4 +1,18 @@
-<?php get_header();	?>
+<?php 
+	if ( get_field('post_template') === 'redirect' ) {
+		if(have_posts()) { 
+			while(have_posts()) { 
+				the_post();
+				$url = get_the_content(); 
+				header('Location:'.$url);
+				exit;
+			}
+		}
+	}
+	else {
+		get_header();
+	}	
+?>
 
 <section id="content" role="main">
 <?php if ( have_posts() ) : ?>
