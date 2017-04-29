@@ -59,6 +59,7 @@ function centalpha_populate_directory_table(){
 		$genre = get_field( 'ca_gd_genre', $post->ID );
 		$status = get_field( 'ca_gd_status', $post->ID );
 		$news = get_field( 'ca_gd_news', $post->ID );
+		$news === true ? $news = 'true' : $news = 'false';
 
 		$ret .= '<tr data-status="' . $status . '" data-genre="' . $genre . '" data-news="' . $news . '" data-year="' . $year . '">';
 			$ret .= '<td role="icons">';
