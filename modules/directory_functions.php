@@ -97,7 +97,7 @@ function centalpha_populate_directory_table(){
 				}
 
 				//news check
-				if ( $news === true ){
+				if ( $news === 'true' ){
 					$ret .=  '<img src="' . $direct . 'gd_icons-04.svg" alt="Commissioned by media company">';
 				}
 
